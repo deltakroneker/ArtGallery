@@ -10,7 +10,9 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+
     private lazy var navigationController = UINavigationController()
+    private var router: NavigationControllerRouter!
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
@@ -18,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
 
+        router = NavigationControllerRouter(navigationController, factory: iOSSwiftUIViewControllerFactory())
+        router.start()
+        
         return true
     }
 }
