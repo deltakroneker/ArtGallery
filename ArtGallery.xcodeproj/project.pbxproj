@@ -34,7 +34,7 @@
 
 /* Begin PBXFileReference section */
 		D21CF9E52A0A635F002C0F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D21CF9E72A0A63A5002C0F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D21CF9E72A0A63A5002C0F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2912AC32A0A61B90084B84F /* ArtGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2912ACA2A0A61BA0084B84F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2912ACD2A0A61BA0084B84F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -74,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				D21CF9E52A0A635F002C0F2E /* AppDelegate.swift */,
+				D21CF9E72A0A63A5002C0F2E /* Info.plist */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -101,7 +102,6 @@
 		D2912AC52A0A61B90084B84F /* ArtGallery */ = {
 			isa = PBXGroup;
 			children = (
-				D21CF9E72A0A63A5002C0F2E /* Info.plist */,
 				D21CF9E42A0A6350002C0F2E /* Main */,
 				D2912ACA2A0A61BA0084B84F /* Assets.xcassets */,
 				D2912ACC2A0A61BA0084B84F /* Preview Content */,
@@ -426,7 +426,7 @@
 				DEVELOPMENT_TEAM = YK9KUM8896;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ArtGallery/Info.plist;
+				INFOPLIST_FILE = ArtGallery/Main/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -455,7 +455,7 @@
 				DEVELOPMENT_TEAM = YK9KUM8896;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ArtGallery/Info.plist;
+				INFOPLIST_FILE = ArtGallery/Main/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
