@@ -12,6 +12,7 @@
 		D21CF9ED2A0A6589002C0F2E /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CF9EC2A0A6589002C0F2E /* ViewControllerFactory.swift */; };
 		D21CF9EF2A0A661B002C0F2E /* iOSSwiftUIViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CF9EE2A0A661B002C0F2E /* iOSSwiftUIViewControllerFactory.swift */; };
 		D21CF9F32A0A679F002C0F2E /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CF9F22A0A679F002C0F2E /* Artwork.swift */; };
+		D21CF9F52A0A6AFC002C0F2E /* ArtworkLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CF9F42A0A6AFC002C0F2E /* ArtworkLoader.swift */; };
 		D2912ACB2A0A61BA0084B84F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2912ACA2A0A61BA0084B84F /* Assets.xcassets */; };
 		D2912ACE2A0A61BA0084B84F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2912ACD2A0A61BA0084B84F /* Preview Assets.xcassets */; };
 		D2912AD82A0A61BA0084B84F /* ArtGalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2912AD72A0A61BA0084B84F /* ArtGalleryTests.swift */; };
@@ -43,6 +44,7 @@
 		D21CF9EC2A0A6589002C0F2E /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		D21CF9EE2A0A661B002C0F2E /* iOSSwiftUIViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSSwiftUIViewControllerFactory.swift; sourceTree = "<group>"; };
 		D21CF9F22A0A679F002C0F2E /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		D21CF9F42A0A6AFC002C0F2E /* ArtworkLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkLoader.swift; sourceTree = "<group>"; };
 		D2912AC32A0A61B90084B84F /* ArtGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2912ACA2A0A61BA0084B84F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2912ACD2A0A61BA0084B84F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				D21CF9F22A0A679F002C0F2E /* Artwork.swift */,
+				D21CF9F42A0A6AFC002C0F2E /* ArtworkLoader.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D21CF9F32A0A679F002C0F2E /* Artwork.swift in Sources */,
+				D21CF9F52A0A6AFC002C0F2E /* ArtworkLoader.swift in Sources */,
 				D21CF9ED2A0A6589002C0F2E /* ViewControllerFactory.swift in Sources */,
 				D21CF9EF2A0A661B002C0F2E /* iOSSwiftUIViewControllerFactory.swift in Sources */,
 				D21CF9E92A0A6527002C0F2E /* NavigationControllerRouter.swift in Sources */,
