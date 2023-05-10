@@ -13,6 +13,12 @@
 		D21CF9EF2A0A661B002C0F2E /* iOSSwiftUIViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CF9EE2A0A661B002C0F2E /* iOSSwiftUIViewControllerFactory.swift */; };
 		D21CF9F32A0A679F002C0F2E /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CF9F22A0A679F002C0F2E /* Artwork.swift */; };
 		D21CF9F52A0A6AFC002C0F2E /* ArtworkLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CF9F42A0A6AFC002C0F2E /* ArtworkLoader.swift */; };
+		D21CF9FD2A0A6C4A002C0F2E /* RemoteArtworkLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CF9FC2A0A6C4A002C0F2E /* RemoteArtworkLoader.swift */; };
+		D21CFA012A0A6DB9002C0F2E /* ArtworkRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA002A0A6DB9002C0F2E /* ArtworkRequestProvider.swift */; };
+		D21CFA032A0A733A002C0F2E /* ArtworkBriefMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA022A0A733A002C0F2E /* ArtworkBriefMapper.swift */; };
+		D21CFA052A0A73BC002C0F2E /* ArtworkBriefDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA042A0A73BC002C0F2E /* ArtworkBriefDTO.swift */; };
+		D21CFA072A0BBDD5002C0F2E /* ArtworkAPIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA062A0BBDD5002C0F2E /* ArtworkAPIErrors.swift */; };
+		D21CFA0A2A0BC161002C0F2E /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA092A0BC134002C0F2E /* HTTPClient.swift */; };
 		D2912ACB2A0A61BA0084B84F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2912ACA2A0A61BA0084B84F /* Assets.xcassets */; };
 		D2912ACE2A0A61BA0084B84F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2912ACD2A0A61BA0084B84F /* Preview Assets.xcassets */; };
 		D2912AD82A0A61BA0084B84F /* ArtGalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2912AD72A0A61BA0084B84F /* ArtGalleryTests.swift */; };
@@ -45,6 +51,12 @@
 		D21CF9EE2A0A661B002C0F2E /* iOSSwiftUIViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSSwiftUIViewControllerFactory.swift; sourceTree = "<group>"; };
 		D21CF9F22A0A679F002C0F2E /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		D21CF9F42A0A6AFC002C0F2E /* ArtworkLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkLoader.swift; sourceTree = "<group>"; };
+		D21CF9FC2A0A6C4A002C0F2E /* RemoteArtworkLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RemoteArtworkLoader.swift; path = ../../../../../../../RemoteArtworkLoader.swift; sourceTree = "<group>"; };
+		D21CFA002A0A6DB9002C0F2E /* ArtworkRequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArtworkRequestProvider.swift; path = ../../../../../../../ArtworkRequestProvider.swift; sourceTree = "<group>"; };
+		D21CFA022A0A733A002C0F2E /* ArtworkBriefMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArtworkBriefMapper.swift; path = ../../../../../../../ArtworkBriefMapper.swift; sourceTree = "<group>"; };
+		D21CFA042A0A73BC002C0F2E /* ArtworkBriefDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArtworkBriefDTO.swift; path = ../../../../../../../ArtworkBriefDTO.swift; sourceTree = "<group>"; };
+		D21CFA062A0BBDD5002C0F2E /* ArtworkAPIErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkAPIErrors.swift; sourceTree = "<group>"; };
+		D21CFA092A0BC134002C0F2E /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		D2912AC32A0A61B90084B84F /* ArtGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2912ACA2A0A61BA0084B84F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2912ACD2A0A61BA0084B84F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -112,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				D21CF9F12A0A6790002C0F2E /* Domain */,
+				D21CF9FA2A0A6C31002C0F2E /* Application */,
 			);
 			path = Artwork;
 			sourceTree = "<group>";
@@ -123,6 +136,35 @@
 				D21CF9F42A0A6AFC002C0F2E /* ArtworkLoader.swift */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		D21CF9FA2A0A6C31002C0F2E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D21CF9FB2A0A6C3A002C0F2E /* API */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D21CF9FB2A0A6C3A002C0F2E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D21CFA082A0BC130002C0F2E /* Shared */,
+				D21CF9FC2A0A6C4A002C0F2E /* RemoteArtworkLoader.swift */,
+				D21CFA002A0A6DB9002C0F2E /* ArtworkRequestProvider.swift */,
+				D21CFA022A0A733A002C0F2E /* ArtworkBriefMapper.swift */,
+				D21CFA042A0A73BC002C0F2E /* ArtworkBriefDTO.swift */,
+				D21CFA062A0BBDD5002C0F2E /* ArtworkAPIErrors.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		D21CFA082A0BC130002C0F2E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D21CFA092A0BC134002C0F2E /* HTTPClient.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		D2912ABA2A0A61B90084B84F = {
@@ -312,11 +354,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D21CF9F32A0A679F002C0F2E /* Artwork.swift in Sources */,
+				D21CF9FD2A0A6C4A002C0F2E /* RemoteArtworkLoader.swift in Sources */,
+				D21CFA0A2A0BC161002C0F2E /* HTTPClient.swift in Sources */,
+				D21CFA032A0A733A002C0F2E /* ArtworkBriefMapper.swift in Sources */,
+				D21CFA012A0A6DB9002C0F2E /* ArtworkRequestProvider.swift in Sources */,
 				D21CF9F52A0A6AFC002C0F2E /* ArtworkLoader.swift in Sources */,
 				D21CF9ED2A0A6589002C0F2E /* ViewControllerFactory.swift in Sources */,
 				D21CF9EF2A0A661B002C0F2E /* iOSSwiftUIViewControllerFactory.swift in Sources */,
 				D21CF9E92A0A6527002C0F2E /* NavigationControllerRouter.swift in Sources */,
 				D21CF9E62A0A635F002C0F2E /* AppDelegate.swift in Sources */,
+				D21CFA072A0BBDD5002C0F2E /* ArtworkAPIErrors.swift in Sources */,
+				D21CFA052A0A73BC002C0F2E /* ArtworkBriefDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

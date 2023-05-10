@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import Combine
 
 protocol ArtworkLoader {
-    func load() async -> Result<[Artwork], Error>
+    func loadBriefs(for query: String) async -> AnyPublisher<[ArtworkBrief], Error>
 }
