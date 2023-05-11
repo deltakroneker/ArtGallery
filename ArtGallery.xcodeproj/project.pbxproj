@@ -19,6 +19,8 @@
 		D21CFA052A0A73BC002C0F2E /* ArtworkDTOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA042A0A73BC002C0F2E /* ArtworkDTOs.swift */; };
 		D21CFA072A0BBDD5002C0F2E /* ArtworkAPIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA062A0BBDD5002C0F2E /* ArtworkAPIErrors.swift */; };
 		D21CFA0A2A0BC161002C0F2E /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA092A0BC134002C0F2E /* HTTPClient.swift */; };
+		D21CFA102A0D273F002C0F2E /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA0F2A0D273F002C0F2E /* URLSessionHTTPClient.swift */; };
+		D21CFA122A0D2A05002C0F2E /* AuthenticatedHTTPClientDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA112A0D2A05002C0F2E /* AuthenticatedHTTPClientDecorator.swift */; };
 		D2912ACB2A0A61BA0084B84F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2912ACA2A0A61BA0084B84F /* Assets.xcassets */; };
 		D2912ACE2A0A61BA0084B84F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2912ACD2A0A61BA0084B84F /* Preview Assets.xcassets */; };
 		D2912AD82A0A61BA0084B84F /* ArtGalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2912AD72A0A61BA0084B84F /* ArtGalleryTests.swift */; };
@@ -57,6 +59,8 @@
 		D21CFA042A0A73BC002C0F2E /* ArtworkDTOs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArtworkDTOs.swift; path = ../../../../../../../ArtworkDTOs.swift; sourceTree = "<group>"; };
 		D21CFA062A0BBDD5002C0F2E /* ArtworkAPIErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkAPIErrors.swift; sourceTree = "<group>"; };
 		D21CFA092A0BC134002C0F2E /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		D21CFA0F2A0D273F002C0F2E /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
+		D21CFA112A0D2A05002C0F2E /* AuthenticatedHTTPClientDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedHTTPClientDecorator.swift; sourceTree = "<group>"; };
 		D2912AC32A0A61B90084B84F /* ArtGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2912ACA2A0A61BA0084B84F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2912ACD2A0A61BA0084B84F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 			children = (
 				D21CF9F12A0A6790002C0F2E /* Domain */,
 				D21CF9FA2A0A6C31002C0F2E /* Application */,
+				D21CFA0D2A0D2720002C0F2E /* Infrastructure */,
 			);
 			path = Artwork;
 			sourceTree = "<group>";
@@ -149,22 +154,31 @@
 		D21CF9FB2A0A6C3A002C0F2E /* API */ = {
 			isa = PBXGroup;
 			children = (
-				D21CFA082A0BC130002C0F2E /* Protocols */,
 				D21CF9FC2A0A6C4A002C0F2E /* RemoteArtworkLoader.swift */,
 				D21CFA002A0A6DB9002C0F2E /* ArtworkRequestProvider.swift */,
 				D21CFA022A0A733A002C0F2E /* ArtworkMapper.swift */,
 				D21CFA042A0A73BC002C0F2E /* ArtworkDTOs.swift */,
 				D21CFA062A0BBDD5002C0F2E /* ArtworkAPIErrors.swift */,
+				D21CFA092A0BC134002C0F2E /* HTTPClient.swift */,
+				D21CFA112A0D2A05002C0F2E /* AuthenticatedHTTPClientDecorator.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
 		};
-		D21CFA082A0BC130002C0F2E /* Protocols */ = {
+		D21CFA0D2A0D2720002C0F2E /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				D21CFA092A0BC134002C0F2E /* HTTPClient.swift */,
+				D21CFA0E2A0D272F002C0F2E /* API */,
 			);
-			path = Protocols;
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		D21CFA0E2A0D272F002C0F2E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D21CFA0F2A0D273F002C0F2E /* URLSessionHTTPClient.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		D2912ABA2A0A61B90084B84F = {
@@ -355,10 +369,12 @@
 			files = (
 				D21CF9F32A0A679F002C0F2E /* Artwork.swift in Sources */,
 				D21CF9FD2A0A6C4A002C0F2E /* RemoteArtworkLoader.swift in Sources */,
+				D21CFA122A0D2A05002C0F2E /* AuthenticatedHTTPClientDecorator.swift in Sources */,
 				D21CFA0A2A0BC161002C0F2E /* HTTPClient.swift in Sources */,
 				D21CFA032A0A733A002C0F2E /* ArtworkMapper.swift in Sources */,
 				D21CFA012A0A6DB9002C0F2E /* ArtworkRequestProvider.swift in Sources */,
 				D21CF9F52A0A6AFC002C0F2E /* ArtworkLoader.swift in Sources */,
+				D21CFA102A0D273F002C0F2E /* URLSessionHTTPClient.swift in Sources */,
 				D21CF9ED2A0A6589002C0F2E /* ViewControllerFactory.swift in Sources */,
 				D21CF9EF2A0A661B002C0F2E /* iOSSwiftUIViewControllerFactory.swift in Sources */,
 				D21CF9E92A0A6527002C0F2E /* NavigationControllerRouter.swift in Sources */,
