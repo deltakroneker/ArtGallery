@@ -36,19 +36,13 @@ struct ArtworkBriefSearchView: View {
 
 struct ArtworkBriefListView_Previews: PreviewProvider {
     static var previews: some View {
-        ArtworkBriefSearchView(viewModel: ArtworkBriefSearchViewModel(artworkLoader: RemoteArtworkLoaderMock()))
+        ArtworkBriefSearchView(viewModel: ArtworkBriefSearchViewModel(artworkBriefLoader: RemoteArtworkBriefLoaderMock()))
     }
 }
 
-fileprivate struct RemoteArtworkLoaderMock: ArtworkLoader {
+fileprivate struct RemoteArtworkBriefLoaderMock: ArtworkBriefLoader {
     func loadBriefs(for query: String) -> AnyPublisher<[ArtworkBrief], Error> {
         Just([ArtworkBrief(id: "0", objectNumber: "123456", title: "Flowers", principalOrFirstMaker: "Van Gogh", headerImageURLString: "")])
-        .setFailureType(to: Error.self)
-        .eraseToAnyPublisher()
-    }
-    
-    func loadArtwork(for id: String) -> AnyPublisher<Artwork, Error> {
-        Just(Artwork(title: "", description: "", date: "", physicalMedium: "", principalMaker: "", makerLine: ""))
         .setFailureType(to: Error.self)
         .eraseToAnyPublisher()
     }

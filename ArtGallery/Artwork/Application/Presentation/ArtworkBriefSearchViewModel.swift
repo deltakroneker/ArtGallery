@@ -9,18 +9,18 @@ import Foundation
 import Combine
 
 @MainActor final class ArtworkBriefSearchViewModel: ObservableObject {
-    private let artworkLoader: ArtworkLoader
+    private let artworkBriefLoader: ArtworkBriefLoader
     private var bag = Set<AnyCancellable>()
     
     @Published var briefs = [ArtworkBrief]()
     var queryText: String = ""
     
-    init(artworkLoader: ArtworkLoader) {
-        self.artworkLoader = artworkLoader
+    init(artworkBriefLoader: ArtworkBriefLoader) {
+        self.artworkBriefLoader = artworkBriefLoader
     }
     
     func performSearch() {
-        self.artworkLoader.loadBriefs(for: queryText)
+        self.artworkBriefLoader.loadBriefs(for: queryText)
             .sink(receiveCompletion: { completion in
                 switch completion {
                 case .finished:

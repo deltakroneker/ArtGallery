@@ -29,6 +29,8 @@
 		D2912AE22A0A61BA0084B84F /* ArtGalleryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2912AE12A0A61BA0084B84F /* ArtGalleryUITests.swift */; };
 		D2912AE42A0A61BA0084B84F /* ArtGalleryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2912AE32A0A61BA0084B84F /* ArtGalleryUITestsLaunchTests.swift */; };
 		D2C9B9C72A13A6400019BC1E /* ArtworkBriefSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9C62A13A6400019BC1E /* ArtworkBriefSearchView.swift */; };
+		D2C9B9CA2A13B0FC0019BC1E /* ArtworkBriefLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9C92A13B0FC0019BC1E /* ArtworkBriefLoader.swift */; };
+		D2C9B9CC2A13B1A10019BC1E /* RemoteArtworkBriefLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9CB2A13B1A10019BC1E /* RemoteArtworkBriefLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		D2912AE12A0A61BA0084B84F /* ArtGalleryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtGalleryUITests.swift; sourceTree = "<group>"; };
 		D2912AE32A0A61BA0084B84F /* ArtGalleryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtGalleryUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D2C9B9C62A13A6400019BC1E /* ArtworkBriefSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefSearchView.swift; sourceTree = "<group>"; };
+		D2C9B9C92A13B0FC0019BC1E /* ArtworkBriefLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefLoader.swift; sourceTree = "<group>"; };
+		D2C9B9CB2A13B1A10019BC1E /* RemoteArtworkBriefLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteArtworkBriefLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				D21CF9F22A0A679F002C0F2E /* Artwork.swift */,
+				D2C9B9C92A13B0FC0019BC1E /* ArtworkBriefLoader.swift */,
 				D21CF9F42A0A6AFC002C0F2E /* ArtworkLoader.swift */,
 			);
 			path = Domain;
@@ -161,6 +166,7 @@
 		D21CF9FB2A0A6C3A002C0F2E /* API */ = {
 			isa = PBXGroup;
 			children = (
+				D2C9B9CB2A13B1A10019BC1E /* RemoteArtworkBriefLoader.swift */,
 				D21CF9FC2A0A6C4A002C0F2E /* RemoteArtworkLoader.swift */,
 				D21CFA002A0A6DB9002C0F2E /* ArtworkRequestProvider.swift */,
 				D21CFA022A0A733A002C0F2E /* ArtworkMapper.swift */,
@@ -394,6 +400,7 @@
 			files = (
 				D21CFA152A0D2CB0002C0F2E /* ArtworkBriefSearchViewModel.swift in Sources */,
 				D21CF9F32A0A679F002C0F2E /* Artwork.swift in Sources */,
+				D2C9B9CA2A13B0FC0019BC1E /* ArtworkBriefLoader.swift in Sources */,
 				D21CF9FD2A0A6C4A002C0F2E /* RemoteArtworkLoader.swift in Sources */,
 				D21CFA122A0D2A05002C0F2E /* AuthenticatedHTTPClientDecorator.swift in Sources */,
 				D21CFA0A2A0BC161002C0F2E /* HTTPClient.swift in Sources */,
@@ -401,6 +408,7 @@
 				D21CFA012A0A6DB9002C0F2E /* ArtworkRequestProvider.swift in Sources */,
 				D21CFA172A0D3544002C0F2E /* ArtworkBriefItemViewModel.swift in Sources */,
 				D21CF9F52A0A6AFC002C0F2E /* ArtworkLoader.swift in Sources */,
+				D2C9B9CC2A13B1A10019BC1E /* RemoteArtworkBriefLoader.swift in Sources */,
 				D21CFA102A0D273F002C0F2E /* URLSessionHTTPClient.swift in Sources */,
 				D21CF9ED2A0A6589002C0F2E /* ViewControllerFactory.swift in Sources */,
 				D21CF9EF2A0A661B002C0F2E /* iOSSwiftUIViewControllerFactory.swift in Sources */,

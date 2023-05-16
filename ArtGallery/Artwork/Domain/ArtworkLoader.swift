@@ -9,6 +9,5 @@ import Foundation
 import Combine
 
 protocol ArtworkLoader {
-    func loadBriefs(for query: String) -> AnyPublisher<[ArtworkBrief], Error>
     func loadArtwork(for id: String) -> AnyPublisher<Artwork, Error>
 }
