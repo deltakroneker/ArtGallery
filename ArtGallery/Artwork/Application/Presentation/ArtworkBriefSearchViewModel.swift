@@ -12,11 +12,12 @@ import Combine
     private let artworkBriefLoader: ArtworkBriefLoader
     private var bag = Set<AnyCancellable>()
     
-    @Published var briefs = [ArtworkBrief]()
     var queryText: String = ""
+    let briefsLoadedAction: ([ArtworkBrief]) -> Void
     
-    init(artworkBriefLoader: ArtworkBriefLoader) {
+    init(artworkBriefLoader: ArtworkBriefLoader, briefsLoadedAction: @escaping ([ArtworkBrief]) -> Void) {
         self.artworkBriefLoader = artworkBriefLoader
+        self.briefsLoadedAction = briefsLoadedAction
     }
     
     func performSearch() {
@@ -33,7 +34,7 @@ import Combine
             }, receiveValue: { [weak self] briefs in
                 print("Load briefs << value event >> ")
                 guard let self = self else { return }
-                self.briefs = briefs
+                self.briefsLoadedAction(briefs)
             })
             .store(in: &bag)
     }

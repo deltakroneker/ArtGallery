@@ -20,14 +20,13 @@ struct ArtworkBriefSearchView: View {
                     viewModel.performSearch()
                 }
             }
-            Text("Results (count: \(viewModel.briefs.count))")
         }
     }
 }
 
 struct ArtworkBriefSearchView_Previews: PreviewProvider {
     static var previews: some View {
-        ArtworkBriefSearchView(viewModel: ArtworkBriefSearchViewModel(artworkBriefLoader: RemoteArtworkBriefLoaderMock()))
+        ArtworkBriefSearchView(viewModel: ArtworkBriefSearchViewModel(artworkBriefLoader: RemoteArtworkBriefLoaderMock(), briefsLoadedAction: { _ in }))
     }
 }
 
