@@ -270,11 +270,19 @@
 		D2C9B9C52A13A62C0019BC1E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D2C9B9D32A13B6080019BC1E /* Preview Data */,
 				D2C9B9C62A13A6400019BC1E /* ArtworkBriefSearchView.swift */,
 				D2C9B9CF2A13B3D90019BC1E /* ArtworkBriefListView.swift */,
-				D2C9B9D12A13B4F80019BC1E /* ArtworkBriefDummyData.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D2C9B9D32A13B6080019BC1E /* Preview Data */ = {
+			isa = PBXGroup;
+			children = (
+				D2C9B9D12A13B4F80019BC1E /* ArtworkBriefDummyData.swift */,
+			);
+			path = "Preview Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
