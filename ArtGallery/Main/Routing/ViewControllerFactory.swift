@@ -5,6 +5,9 @@
 //  Created by nikolamilic on 5/9/23.
 //
 
-import Foundation
+import UIKit
 
-protocol ViewControllerFactory {}
+protocol ViewControllerFactory {
+    func searchViewController(briefsLoadedAction: @escaping ([ArtworkBrief]) -> Void) -> UIViewController
+    func briefListViewController(searchQuery: String, briefs: [ArtworkBrief], briefTapAction: @escaping (ArtworkBrief) -> Void) -> UIViewController
+}

@@ -5,6 +5,20 @@
 //  Created by nikolamilic on 5/9/23.
 //
 
-import Foundation
+import UIKit
+import SwiftUI
 
-class iOSSwiftUIViewControllerFactory: ViewControllerFactory {}
+class iOSSwiftUIViewControllerFactory: ViewControllerFactory {
+    @MainActor func searchViewController(briefsLoadedAction: @escaping ([ArtworkBrief]) -> Void) -> UIViewController {
+        let loader = RemoteArtworkBriefLoader(client: URLSession.shared)
+        let viewModel = ArtworkBriefSearchViewModel(artworkBriefLoader: loader, briefsLoadedAction: briefsLoadedAction)
+        let view = ArtworkBriefSearchView(viewModel: viewModel)
+        return UIHostingController(rootView: view)
+    }
+    
+    @MainActor func briefListViewController(searchQuery: String, briefs: [ArtworkBrief], briefTapAction: @escaping (ArtworkBrief) -> Void) -> UIViewController {
+        let viewModel = ArtworkBriefListViewModel(searchQuery: searchQuery, briefs: briefs, briefTapAction: briefTapAction)
+        let view = ArtworkBriefListView(viewModel: viewModel)
+        return UIHostingController(rootView: view)
+    }
+}
