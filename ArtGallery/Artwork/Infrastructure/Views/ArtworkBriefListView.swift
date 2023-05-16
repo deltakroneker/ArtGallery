@@ -16,16 +16,20 @@ struct ArtworkBriefListView: View {
     }
     
     var body: some View {
-        List {
-            ForEach(viewModel.briefs) {
-                Text($0.title)
+        NavigationView {
+            List {
+                ForEach(viewModel.briefs) {
+                    ArtworkBriefItemView(viewModel: ArtworkBriefItemViewModel(artworkBrief: $0))
+                }
             }
+            .navigationTitle("\"\(viewModel.searchQuery)\"")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
 
 struct ArtworkBriefListView_Previews: PreviewProvider {
     static var previews: some View {
-        ArtworkBriefListView(viewModel: ArtworkBriefListViewModel(briefs: ArtworkBrief.dummyData, briefTapAction: { _ in }))
+        ArtworkBriefListView(viewModel: ArtworkBriefListViewModel(searchQuery: "van gogh", briefs: ArtworkBrief.dummyData, briefTapAction: { _ in }))
     }
 }

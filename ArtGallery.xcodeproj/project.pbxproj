@@ -34,6 +34,7 @@
 		D2C9B9CE2A13B2990019BC1E /* ArtworkBriefListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9CD2A13B2990019BC1E /* ArtworkBriefListViewModel.swift */; };
 		D2C9B9D02A13B3D90019BC1E /* ArtworkBriefListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9CF2A13B3D90019BC1E /* ArtworkBriefListView.swift */; };
 		D2C9B9D22A13B4F80019BC1E /* ArtworkBriefDummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9D12A13B4F80019BC1E /* ArtworkBriefDummyData.swift */; };
+		D2C9B9D92A13B76B0019BC1E /* ArtworkBriefItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9D82A13B76B0019BC1E /* ArtworkBriefItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		D2C9B9CD2A13B2990019BC1E /* ArtworkBriefListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefListViewModel.swift; sourceTree = "<group>"; };
 		D2C9B9CF2A13B3D90019BC1E /* ArtworkBriefListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefListView.swift; sourceTree = "<group>"; };
 		D2C9B9D12A13B4F80019BC1E /* ArtworkBriefDummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefDummyData.swift; sourceTree = "<group>"; };
+		D2C9B9D82A13B76B0019BC1E /* ArtworkBriefItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +275,7 @@
 				D2C9B9D32A13B6080019BC1E /* Preview Data */,
 				D2C9B9C62A13A6400019BC1E /* ArtworkBriefSearchView.swift */,
 				D2C9B9CF2A13B3D90019BC1E /* ArtworkBriefListView.swift */,
+				D2C9B9D82A13B76B0019BC1E /* ArtworkBriefItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				D21CFA152A0D2CB0002C0F2E /* ArtworkBriefSearchViewModel.swift in Sources */,
 				D2C9B9D22A13B4F80019BC1E /* ArtworkBriefDummyData.swift in Sources */,
 				D21CF9F32A0A679F002C0F2E /* Artwork.swift in Sources */,
+				D2C9B9D92A13B76B0019BC1E /* ArtworkBriefItemView.swift in Sources */,
 				D2C9B9CA2A13B0FC0019BC1E /* ArtworkBriefLoader.swift in Sources */,
 				D21CF9FD2A0A6C4A002C0F2E /* RemoteArtworkLoader.swift in Sources */,
 				D21CFA122A0D2A05002C0F2E /* AuthenticatedHTTPClientDecorator.swift in Sources */,
