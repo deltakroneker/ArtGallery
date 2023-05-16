@@ -18,7 +18,7 @@ struct Artwork {
     let makerLine: String
 }
 
-struct ArtworkBrief {
+struct ArtworkBrief: Identifiable {
     let id: String
     let objectNumber: String
     let title: String

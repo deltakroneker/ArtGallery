@@ -1,5 +1,5 @@
 //
-//  ArtworkBriefListViewModel.swift
+//  ArtworkBriefSearchViewModel.swift
 //  ArtGallery
 //
 //  Created by nikolamilic on 5/11/23.
@@ -8,18 +8,19 @@
 import Foundation
 import Combine
 
-@MainActor final class ArtworkBriefListViewModel: ObservableObject {
+@MainActor final class ArtworkBriefSearchViewModel: ObservableObject {
     private let artworkLoader: ArtworkLoader
     private var bag = Set<AnyCancellable>()
     
     @Published var briefs = [ArtworkBrief]()
+    var queryText: String = ""
     
     init(artworkLoader: ArtworkLoader) {
         self.artworkLoader = artworkLoader
     }
     
-    func findArtwork(for query: String) {
-        self.artworkLoader.loadBriefs(for: query)
+    func performSearch() {
+        self.artworkLoader.loadBriefs(for: queryText)
             .sink(receiveCompletion: { completion in
                 switch completion {
                 case .finished:

@@ -21,13 +21,14 @@
 		D21CFA0A2A0BC161002C0F2E /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA092A0BC134002C0F2E /* HTTPClient.swift */; };
 		D21CFA102A0D273F002C0F2E /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA0F2A0D273F002C0F2E /* URLSessionHTTPClient.swift */; };
 		D21CFA122A0D2A05002C0F2E /* AuthenticatedHTTPClientDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA112A0D2A05002C0F2E /* AuthenticatedHTTPClientDecorator.swift */; };
-		D21CFA152A0D2CB0002C0F2E /* ArtworkBriefListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA142A0D2CB0002C0F2E /* ArtworkBriefListViewModel.swift */; };
+		D21CFA152A0D2CB0002C0F2E /* ArtworkBriefSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA142A0D2CB0002C0F2E /* ArtworkBriefSearchViewModel.swift */; };
 		D21CFA172A0D3544002C0F2E /* ArtworkBriefItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA162A0D3544002C0F2E /* ArtworkBriefItemViewModel.swift */; };
 		D2912ACB2A0A61BA0084B84F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2912ACA2A0A61BA0084B84F /* Assets.xcassets */; };
 		D2912ACE2A0A61BA0084B84F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2912ACD2A0A61BA0084B84F /* Preview Assets.xcassets */; };
 		D2912AD82A0A61BA0084B84F /* ArtGalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2912AD72A0A61BA0084B84F /* ArtGalleryTests.swift */; };
 		D2912AE22A0A61BA0084B84F /* ArtGalleryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2912AE12A0A61BA0084B84F /* ArtGalleryUITests.swift */; };
 		D2912AE42A0A61BA0084B84F /* ArtGalleryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2912AE32A0A61BA0084B84F /* ArtGalleryUITestsLaunchTests.swift */; };
+		D2C9B9C72A13A6400019BC1E /* ArtworkBriefSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9C62A13A6400019BC1E /* ArtworkBriefSearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +64,7 @@
 		D21CFA092A0BC134002C0F2E /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		D21CFA0F2A0D273F002C0F2E /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		D21CFA112A0D2A05002C0F2E /* AuthenticatedHTTPClientDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedHTTPClientDecorator.swift; sourceTree = "<group>"; };
-		D21CFA142A0D2CB0002C0F2E /* ArtworkBriefListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefListViewModel.swift; sourceTree = "<group>"; };
+		D21CFA142A0D2CB0002C0F2E /* ArtworkBriefSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefSearchViewModel.swift; sourceTree = "<group>"; };
 		D21CFA162A0D3544002C0F2E /* ArtworkBriefItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefItemViewModel.swift; sourceTree = "<group>"; };
 		D2912AC32A0A61B90084B84F /* ArtGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2912ACA2A0A61BA0084B84F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 		D2912ADD2A0A61BA0084B84F /* ArtGalleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtGalleryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2912AE12A0A61BA0084B84F /* ArtGalleryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtGalleryUITests.swift; sourceTree = "<group>"; };
 		D2912AE32A0A61BA0084B84F /* ArtGalleryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtGalleryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D2C9B9C62A13A6400019BC1E /* ArtworkBriefSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefSearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 		D21CFA0D2A0D2720002C0F2E /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				D2C9B9C52A13A62C0019BC1E /* Views */,
 				D21CFA0E2A0D272F002C0F2E /* API */,
 			);
 			path = Infrastructure;
@@ -189,7 +192,7 @@
 		D21CFA132A0D2C1F002C0F2E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				D21CFA142A0D2CB0002C0F2E /* ArtworkBriefListViewModel.swift */,
+				D21CFA142A0D2CB0002C0F2E /* ArtworkBriefSearchViewModel.swift */,
 				D21CFA162A0D3544002C0F2E /* ArtworkBriefItemViewModel.swift */,
 			);
 			path = Presentation;
@@ -249,6 +252,14 @@
 				D2912AE32A0A61BA0084B84F /* ArtGalleryUITestsLaunchTests.swift */,
 			);
 			path = ArtGalleryUITests;
+			sourceTree = "<group>";
+		};
+		D2C9B9C52A13A62C0019BC1E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D2C9B9C62A13A6400019BC1E /* ArtworkBriefSearchView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,7 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D21CFA152A0D2CB0002C0F2E /* ArtworkBriefListViewModel.swift in Sources */,
+				D21CFA152A0D2CB0002C0F2E /* ArtworkBriefSearchViewModel.swift in Sources */,
 				D21CF9F32A0A679F002C0F2E /* Artwork.swift in Sources */,
 				D21CF9FD2A0A6C4A002C0F2E /* RemoteArtworkLoader.swift in Sources */,
 				D21CFA122A0D2A05002C0F2E /* AuthenticatedHTTPClientDecorator.swift in Sources */,
@@ -393,6 +404,7 @@
 				D21CFA102A0D273F002C0F2E /* URLSessionHTTPClient.swift in Sources */,
 				D21CF9ED2A0A6589002C0F2E /* ViewControllerFactory.swift in Sources */,
 				D21CF9EF2A0A661B002C0F2E /* iOSSwiftUIViewControllerFactory.swift in Sources */,
+				D2C9B9C72A13A6400019BC1E /* ArtworkBriefSearchView.swift in Sources */,
 				D21CF9E92A0A6527002C0F2E /* NavigationControllerRouter.swift in Sources */,
 				D21CF9E62A0A635F002C0F2E /* AppDelegate.swift in Sources */,
 				D21CFA072A0BBDD5002C0F2E /* ArtworkAPIErrors.swift in Sources */,
