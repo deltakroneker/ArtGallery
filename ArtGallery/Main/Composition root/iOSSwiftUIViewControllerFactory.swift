@@ -10,7 +10,7 @@ import SwiftUI
 
 class iOSSwiftUIViewControllerFactory: ViewControllerFactory {
     @MainActor func searchViewController(briefsLoadedAction: @escaping (String, [ArtworkBrief]) -> Void) -> UIViewController {
-        let loader = RemoteArtworkBriefLoader(client: URLSession.shared)
+        let loader = RemoteArtworkBriefLoaderMock()
         let viewModel = ArtworkBriefSearchViewModel(artworkBriefLoader: loader, briefsLoadedAction: briefsLoadedAction)
         let view = ArtworkBriefSearchView(viewModel: viewModel)
         return UIHostingController(rootView: view)

@@ -29,7 +29,7 @@ struct ArtworkBriefSearchView_Previews: PreviewProvider {
     }
 }
 
-fileprivate struct RemoteArtworkBriefLoaderMock: ArtworkBriefLoader {
+struct RemoteArtworkBriefLoaderMock: ArtworkBriefLoader {
     func loadBriefs(for query: String) -> AnyPublisher<[ArtworkBrief], Error> {
         Just([ArtworkBrief.dummyData.first!])
         .setFailureType(to: Error.self)
