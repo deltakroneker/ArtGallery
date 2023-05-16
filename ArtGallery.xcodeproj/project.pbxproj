@@ -35,6 +35,7 @@
 		D2C9B9D02A13B3D90019BC1E /* ArtworkBriefListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9CF2A13B3D90019BC1E /* ArtworkBriefListView.swift */; };
 		D2C9B9D22A13B4F80019BC1E /* ArtworkBriefDummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9D12A13B4F80019BC1E /* ArtworkBriefDummyData.swift */; };
 		D2C9B9D92A13B76B0019BC1E /* ArtworkBriefItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9D82A13B76B0019BC1E /* ArtworkBriefItemView.swift */; };
+		D2C9B9DB2A13BF9B0019BC1E /* ArtworkBrief.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9DA2A13BF9B0019BC1E /* ArtworkBrief.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		D2C9B9CF2A13B3D90019BC1E /* ArtworkBriefListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefListView.swift; sourceTree = "<group>"; };
 		D2C9B9D12A13B4F80019BC1E /* ArtworkBriefDummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefDummyData.swift; sourceTree = "<group>"; };
 		D2C9B9D82A13B76B0019BC1E /* ArtworkBriefItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefItemView.swift; sourceTree = "<group>"; };
+		D2C9B9DA2A13BF9B0019BC1E /* ArtworkBrief.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBrief.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 		D21CF9F12A0A6790002C0F2E /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				D2C9B9DA2A13BF9B0019BC1E /* ArtworkBrief.swift */,
 				D21CF9F22A0A679F002C0F2E /* Artwork.swift */,
 				D2C9B9C92A13B0FC0019BC1E /* ArtworkBriefLoader.swift */,
 				D21CF9F42A0A6AFC002C0F2E /* ArtworkLoader.swift */,
@@ -425,6 +428,7 @@
 				D2C9B9D92A13B76B0019BC1E /* ArtworkBriefItemView.swift in Sources */,
 				D2C9B9CA2A13B0FC0019BC1E /* ArtworkBriefLoader.swift in Sources */,
 				D21CF9FD2A0A6C4A002C0F2E /* RemoteArtworkLoader.swift in Sources */,
+				D2C9B9DB2A13BF9B0019BC1E /* ArtworkBrief.swift in Sources */,
 				D21CFA122A0D2A05002C0F2E /* AuthenticatedHTTPClientDecorator.swift in Sources */,
 				D21CFA0A2A0BC161002C0F2E /* HTTPClient.swift in Sources */,
 				D21CFA032A0A733A002C0F2E /* ArtworkMapper.swift in Sources */,

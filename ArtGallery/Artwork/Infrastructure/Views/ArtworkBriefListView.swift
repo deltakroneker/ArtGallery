@@ -8,12 +8,7 @@
 import SwiftUI
 
 struct ArtworkBriefListView: View {
-    
     @ObservedObject var viewModel: ArtworkBriefListViewModel
-    
-    init(viewModel: ArtworkBriefListViewModel) {
-        self.viewModel = viewModel
-    }
     
     var body: some View {
         NavigationView {

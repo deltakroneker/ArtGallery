@@ -17,11 +17,3 @@ struct Artwork {
     let principalMaker: String
     let makerLine: String
 }
-
-struct ArtworkBrief: Identifiable {
-    let id: String
-    let objectNumber: String
-    let title: String
-    let principalOrFirstMaker: String
-    let headerImageURLString: String
-}

@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ArtworkBriefItemView: View {
-    
     let viewModel: ArtworkBriefItemViewModel
     
     var body: some View {

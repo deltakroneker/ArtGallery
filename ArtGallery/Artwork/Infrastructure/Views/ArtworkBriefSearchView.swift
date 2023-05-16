@@ -9,7 +9,6 @@ import SwiftUI
 import Combine
 
 struct ArtworkBriefSearchView: View {
-    
     @ObservedObject var viewModel: ArtworkBriefSearchViewModel
     
     var body: some View {
