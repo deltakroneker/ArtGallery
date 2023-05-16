@@ -8,6 +8,6 @@
 import UIKit
 
 protocol ViewControllerFactory {
-    func searchViewController(briefsLoadedAction: @escaping ([ArtworkBrief]) -> Void) -> UIViewController
+    func searchViewController(briefsLoadedAction: @escaping (String, [ArtworkBrief]) -> Void) -> UIViewController
     func briefListViewController(searchQuery: String, briefs: [ArtworkBrief], briefTapAction: @escaping (ArtworkBrief) -> Void) -> UIViewController
 }

@@ -13,9 +13,9 @@ import Combine
     private var bag = Set<AnyCancellable>()
     
     var queryText: String = ""
-    let briefsLoadedAction: ([ArtworkBrief]) -> Void
+    let briefsLoadedAction: (String, [ArtworkBrief]) -> Void
     
-    init(artworkBriefLoader: ArtworkBriefLoader, briefsLoadedAction: @escaping ([ArtworkBrief]) -> Void) {
+    init(artworkBriefLoader: ArtworkBriefLoader, briefsLoadedAction: @escaping (String, [ArtworkBrief]) -> Void) {
         self.artworkBriefLoader = artworkBriefLoader
         self.briefsLoadedAction = briefsLoadedAction
     }
@@ -34,7 +34,7 @@ import Combine
             }, receiveValue: { [weak self] briefs in
                 print("Load briefs << value event >> ")
                 guard let self = self else { return }
-                self.briefsLoadedAction(briefs)
+                self.briefsLoadedAction(self.queryText, briefs)
             })
             .store(in: &bag)
     }

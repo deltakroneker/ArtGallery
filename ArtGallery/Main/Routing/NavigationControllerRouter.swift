@@ -16,5 +16,17 @@ final class NavigationControllerRouter {
         self.factory = factory
     }
     
-    func start() {}
+    func start() {
+        let searchVC = factory.searchViewController(briefsLoadedAction: searchScreenBriefsLoadedAction)
+        self.navigationController.pushViewController(searchVC, animated: true)
+    }
+    
+    private func searchScreenBriefsLoadedAction(_ searchQuery: String, _ briefs: [ArtworkBrief]) {
+        let listVC = factory.briefListViewController(searchQuery: searchQuery, briefs: briefs, briefTapAction: listScreenBriefTapAction)
+        self.navigationController.pushViewController(listVC, animated: true)
+    }
+    
+    private func listScreenBriefTapAction(_ brief: ArtworkBrief) {
+        print("TODO: Transition to Artwork details screen")
+    }
 }

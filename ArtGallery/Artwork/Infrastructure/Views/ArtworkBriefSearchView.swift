@@ -25,7 +25,7 @@ struct ArtworkBriefSearchView: View {
 
 struct ArtworkBriefSearchView_Previews: PreviewProvider {
     static var previews: some View {
-        ArtworkBriefSearchView(viewModel: ArtworkBriefSearchViewModel(artworkBriefLoader: RemoteArtworkBriefLoaderMock(), briefsLoadedAction: { _ in }))
+        ArtworkBriefSearchView(viewModel: ArtworkBriefSearchViewModel(artworkBriefLoader: RemoteArtworkBriefLoaderMock(), briefsLoadedAction: { (_, _) in }))
     }
 }
 
