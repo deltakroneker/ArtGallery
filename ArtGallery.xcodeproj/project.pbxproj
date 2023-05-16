@@ -31,6 +31,7 @@
 		D2C9B9C72A13A6400019BC1E /* ArtworkBriefSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9C62A13A6400019BC1E /* ArtworkBriefSearchView.swift */; };
 		D2C9B9CA2A13B0FC0019BC1E /* ArtworkBriefLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9C92A13B0FC0019BC1E /* ArtworkBriefLoader.swift */; };
 		D2C9B9CC2A13B1A10019BC1E /* RemoteArtworkBriefLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9CB2A13B1A10019BC1E /* RemoteArtworkBriefLoader.swift */; };
+		D2C9B9CE2A13B2990019BC1E /* ArtworkBriefListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9CD2A13B2990019BC1E /* ArtworkBriefListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		D2C9B9C62A13A6400019BC1E /* ArtworkBriefSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefSearchView.swift; sourceTree = "<group>"; };
 		D2C9B9C92A13B0FC0019BC1E /* ArtworkBriefLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefLoader.swift; sourceTree = "<group>"; };
 		D2C9B9CB2A13B1A10019BC1E /* RemoteArtworkBriefLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteArtworkBriefLoader.swift; sourceTree = "<group>"; };
+		D2C9B9CD2A13B2990019BC1E /* ArtworkBriefListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				D21CFA142A0D2CB0002C0F2E /* ArtworkBriefSearchViewModel.swift */,
+				D2C9B9CD2A13B2990019BC1E /* ArtworkBriefListViewModel.swift */,
 				D21CFA162A0D3544002C0F2E /* ArtworkBriefItemViewModel.swift */,
 			);
 			path = Presentation;
@@ -398,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2C9B9CE2A13B2990019BC1E /* ArtworkBriefListViewModel.swift in Sources */,
 				D21CFA152A0D2CB0002C0F2E /* ArtworkBriefSearchViewModel.swift in Sources */,
 				D21CF9F32A0A679F002C0F2E /* Artwork.swift in Sources */,
 				D2C9B9CA2A13B0FC0019BC1E /* ArtworkBriefLoader.swift in Sources */,
