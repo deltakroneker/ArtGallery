@@ -12,10 +12,6 @@ struct ArtworkBriefSearchView: View {
     
     @ObservedObject var viewModel: ArtworkBriefSearchViewModel
     
-    init(viewModel: ArtworkBriefSearchViewModel) {
-        self.viewModel = viewModel
-    }
-    
     var body: some View {
         VStack {
             Form {
