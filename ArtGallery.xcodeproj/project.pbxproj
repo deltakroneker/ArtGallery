@@ -32,6 +32,8 @@
 		D2C9B9CA2A13B0FC0019BC1E /* ArtworkBriefLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9C92A13B0FC0019BC1E /* ArtworkBriefLoader.swift */; };
 		D2C9B9CC2A13B1A10019BC1E /* RemoteArtworkBriefLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9CB2A13B1A10019BC1E /* RemoteArtworkBriefLoader.swift */; };
 		D2C9B9CE2A13B2990019BC1E /* ArtworkBriefListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9CD2A13B2990019BC1E /* ArtworkBriefListViewModel.swift */; };
+		D2C9B9D02A13B3D90019BC1E /* ArtworkBriefListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9CF2A13B3D90019BC1E /* ArtworkBriefListView.swift */; };
+		D2C9B9D22A13B4F80019BC1E /* ArtworkBriefDummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9D12A13B4F80019BC1E /* ArtworkBriefDummyData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		D2C9B9C92A13B0FC0019BC1E /* ArtworkBriefLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefLoader.swift; sourceTree = "<group>"; };
 		D2C9B9CB2A13B1A10019BC1E /* RemoteArtworkBriefLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteArtworkBriefLoader.swift; sourceTree = "<group>"; };
 		D2C9B9CD2A13B2990019BC1E /* ArtworkBriefListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefListViewModel.swift; sourceTree = "<group>"; };
+		D2C9B9CF2A13B3D90019BC1E /* ArtworkBriefListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefListView.swift; sourceTree = "<group>"; };
+		D2C9B9D12A13B4F80019BC1E /* ArtworkBriefDummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefDummyData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +271,8 @@
 			isa = PBXGroup;
 			children = (
 				D2C9B9C62A13A6400019BC1E /* ArtworkBriefSearchView.swift */,
+				D2C9B9CF2A13B3D90019BC1E /* ArtworkBriefListView.swift */,
+				D2C9B9D12A13B4F80019BC1E /* ArtworkBriefDummyData.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -403,6 +409,7 @@
 			files = (
 				D2C9B9CE2A13B2990019BC1E /* ArtworkBriefListViewModel.swift in Sources */,
 				D21CFA152A0D2CB0002C0F2E /* ArtworkBriefSearchViewModel.swift in Sources */,
+				D2C9B9D22A13B4F80019BC1E /* ArtworkBriefDummyData.swift in Sources */,
 				D21CF9F32A0A679F002C0F2E /* Artwork.swift in Sources */,
 				D2C9B9CA2A13B0FC0019BC1E /* ArtworkBriefLoader.swift in Sources */,
 				D21CF9FD2A0A6C4A002C0F2E /* RemoteArtworkLoader.swift in Sources */,
@@ -421,6 +428,7 @@
 				D21CF9E62A0A635F002C0F2E /* AppDelegate.swift in Sources */,
 				D21CFA072A0BBDD5002C0F2E /* ArtworkAPIErrors.swift in Sources */,
 				D21CFA052A0A73BC002C0F2E /* ArtworkDTOs.swift in Sources */,
+				D2C9B9D02A13B3D90019BC1E /* ArtworkBriefListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
