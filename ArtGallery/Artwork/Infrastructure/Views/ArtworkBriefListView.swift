@@ -11,7 +11,7 @@ struct ArtworkBriefListView: View {
     @ObservedObject var viewModel: ArtworkBriefListViewModel
     
     var body: some View {
-        NavigationView {
+        Group {
             List {
                 ForEach(viewModel.briefs) {
                     ArtworkBriefItemView(viewModel: ArtworkBriefItemViewModel(artworkBrief: $0))
