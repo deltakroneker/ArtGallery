@@ -12,8 +12,12 @@ import Combine
     private let artworkBriefLoader: ArtworkBriefLoader
     private var bag = Set<AnyCancellable>()
     
-    var queryText: String = ""
+    @Published var queryText: String = ""
     let briefsLoadedAction: (String, [ArtworkBrief]) -> Void
+    
+    var isPerformSearchDisabled: Bool {
+        return queryText.isEmpty
+    }
     
     init(artworkBriefLoader: ArtworkBriefLoader, briefsLoadedAction: @escaping (String, [ArtworkBrief]) -> Void) {
         self.artworkBriefLoader = artworkBriefLoader

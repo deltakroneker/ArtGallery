@@ -18,6 +18,7 @@ struct ArtworkBriefSearchView: View {
                 Button("Search") {
                     viewModel.performSearch()
                 }
+                .disabled(viewModel.isPerformSearchDisabled)
             }
         }
     }
