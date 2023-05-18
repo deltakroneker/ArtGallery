@@ -22,8 +22,10 @@ final class NavigationControllerRouter {
     }
     
     private func searchScreenBriefsLoadedAction(_ searchQuery: String, _ briefs: [ArtworkBrief]) {
-        let listVC = factory.briefListViewController(searchQuery: searchQuery, briefs: briefs, briefTapAction: listScreenBriefTapAction)
-        self.navigationController.pushViewController(listVC, animated: true)
+        DispatchQueue.main.async {
+            let listVC = self.factory.briefListViewController(searchQuery: searchQuery, briefs: briefs, briefTapAction: self.listScreenBriefTapAction)
+            self.navigationController.pushViewController(listVC, animated: true)
+        }
     }
     
     private func listScreenBriefTapAction(_ brief: ArtworkBrief) {

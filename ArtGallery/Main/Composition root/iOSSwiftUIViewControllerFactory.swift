@@ -10,7 +10,9 @@ import SwiftUI
 
 class iOSSwiftUIViewControllerFactory: ViewControllerFactory {
     @MainActor func searchViewController(briefsLoadedAction: @escaping (String, [ArtworkBrief]) -> Void) -> UIViewController {
-        let loader = RemoteArtworkBriefLoaderMock()
+        let apiKey = Bundle.main.object(forInfoDictionaryKey: "RIJKSMUSEUM_API_KEY") as! String
+        let httpClient = AuthenticatedHTTPClientDecorator(httpClient: URLSession.shared, apiKey: apiKey)
+        let loader = RemoteArtworkBriefLoader(client: httpClient)
         let viewModel = ArtworkBriefSearchViewModel(artworkBriefLoader: loader, briefsLoadedAction: briefsLoadedAction)
         let view = ArtworkBriefSearchView(viewModel: viewModel)
         return UIHostingController(rootView: view)
