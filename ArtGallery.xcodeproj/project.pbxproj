@@ -73,6 +73,7 @@
 		D21CFA112A0D2A05002C0F2E /* AuthenticatedHTTPClientDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedHTTPClientDecorator.swift; sourceTree = "<group>"; };
 		D21CFA142A0D2CB0002C0F2E /* ArtworkBriefSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefSearchViewModel.swift; sourceTree = "<group>"; };
 		D21CFA162A0D3544002C0F2E /* ArtworkBriefItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefItemViewModel.swift; sourceTree = "<group>"; };
+		D272B33E2A167EE4004FB318 /* secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = secrets.xcconfig; sourceTree = "<group>"; };
 		D2912AC32A0A61B90084B84F /* ArtGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2912ACA2A0A61BA0084B84F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2912ACD2A0A61BA0084B84F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -122,6 +123,7 @@
 				D21CF9EB2A0A6532002C0F2E /* Composition root */,
 				D21CF9EA2A0A652D002C0F2E /* Routing */,
 				D21CF9E72A0A63A5002C0F2E /* Info.plist */,
+				D272B33E2A167EE4004FB318 /* secrets.xcconfig */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -483,6 +485,7 @@
 /* Begin XCBuildConfiguration section */
 		D2912AE52A0A61BA0084B84F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D272B33E2A167EE4004FB318 /* secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -543,6 +546,7 @@
 		};
 		D2912AE62A0A61BA0084B84F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D272B33E2A167EE4004FB318 /* secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
