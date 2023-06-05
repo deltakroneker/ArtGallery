@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-@MainActor final class ArtworkBriefSearchViewModel: ObservableObject {
+final class ArtworkBriefSearchViewModel: ObservableObject {
     private let artworkBriefLoader: ArtworkBriefLoader
     private var bag = Set<AnyCancellable>()
     
@@ -25,6 +25,9 @@ import Combine
     }
     
     func performSearch() {
+        guard !isPerformSearchDisabled else {
+            return
+        }
         self.artworkBriefLoader.loadBriefs(for: queryText)
             .sink(receiveCompletion: { completion in
                 switch completion {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ArtworkBrief: Identifiable {
+struct ArtworkBrief: Identifiable, Equatable {
     let id: String
     let objectNumber: String
     let title: String

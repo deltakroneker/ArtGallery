@@ -23,10 +23,9 @@
 		D21CFA122A0D2A05002C0F2E /* AuthenticatedHTTPClientDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA112A0D2A05002C0F2E /* AuthenticatedHTTPClientDecorator.swift */; };
 		D21CFA152A0D2CB0002C0F2E /* ArtworkBriefSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA142A0D2CB0002C0F2E /* ArtworkBriefSearchViewModel.swift */; };
 		D21CFA172A0D3544002C0F2E /* ArtworkBriefItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA162A0D3544002C0F2E /* ArtworkBriefItemViewModel.swift */; };
+		D272B3402A178E98004FB318 /* ArtworkBriefSearchViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272B33F2A178E98004FB318 /* ArtworkBriefSearchViewModelTest.swift */; };
 		D2912ACB2A0A61BA0084B84F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2912ACA2A0A61BA0084B84F /* Assets.xcassets */; };
 		D2912ACE2A0A61BA0084B84F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2912ACD2A0A61BA0084B84F /* Preview Assets.xcassets */; };
-		D2912AE22A0A61BA0084B84F /* ArtGalleryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2912AE12A0A61BA0084B84F /* ArtGalleryUITests.swift */; };
-		D2912AE42A0A61BA0084B84F /* ArtGalleryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2912AE32A0A61BA0084B84F /* ArtGalleryUITestsLaunchTests.swift */; };
 		D2C9B9C72A13A6400019BC1E /* ArtworkBriefSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9C62A13A6400019BC1E /* ArtworkBriefSearchView.swift */; };
 		D2C9B9CA2A13B0FC0019BC1E /* ArtworkBriefLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9C92A13B0FC0019BC1E /* ArtworkBriefLoader.swift */; };
 		D2C9B9CC2A13B1A10019BC1E /* RemoteArtworkBriefLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9CB2A13B1A10019BC1E /* RemoteArtworkBriefLoader.swift */; };
@@ -39,13 +38,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		D2912AD42A0A61BA0084B84F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D2912ABB2A0A61B90084B84F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D2912AC22A0A61B90084B84F;
-			remoteInfo = ArtGallery;
-		};
-		D2912ADE2A0A61BA0084B84F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D2912ABB2A0A61B90084B84F /* Project object */;
 			proxyType = 1;
@@ -73,13 +65,11 @@
 		D21CFA142A0D2CB0002C0F2E /* ArtworkBriefSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefSearchViewModel.swift; sourceTree = "<group>"; };
 		D21CFA162A0D3544002C0F2E /* ArtworkBriefItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefItemViewModel.swift; sourceTree = "<group>"; };
 		D272B33E2A167EE4004FB318 /* secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = secrets.xcconfig; sourceTree = "<group>"; };
+		D272B33F2A178E98004FB318 /* ArtworkBriefSearchViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefSearchViewModelTest.swift; sourceTree = "<group>"; };
 		D2912AC32A0A61B90084B84F /* ArtGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2912ACA2A0A61BA0084B84F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2912ACD2A0A61BA0084B84F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D2912AD32A0A61BA0084B84F /* ArtGalleryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtGalleryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2912ADD2A0A61BA0084B84F /* ArtGalleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtGalleryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2912AE12A0A61BA0084B84F /* ArtGalleryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtGalleryUITests.swift; sourceTree = "<group>"; };
-		D2912AE32A0A61BA0084B84F /* ArtGalleryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtGalleryUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D2C9B9C62A13A6400019BC1E /* ArtworkBriefSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefSearchView.swift; sourceTree = "<group>"; };
 		D2C9B9C92A13B0FC0019BC1E /* ArtworkBriefLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefLoader.swift; sourceTree = "<group>"; };
 		D2C9B9CB2A13B1A10019BC1E /* RemoteArtworkBriefLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteArtworkBriefLoader.swift; sourceTree = "<group>"; };
@@ -99,13 +89,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D2912AD02A0A61BA0084B84F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D2912ADA2A0A61BA0084B84F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -221,7 +204,6 @@
 			children = (
 				D2912AC52A0A61B90084B84F /* ArtGallery */,
 				D2912AD62A0A61BA0084B84F /* ArtGalleryTests */,
-				D2912AE02A0A61BA0084B84F /* ArtGalleryUITests */,
 				D2912AC42A0A61B90084B84F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -231,7 +213,6 @@
 			children = (
 				D2912AC32A0A61B90084B84F /* ArtGallery.app */,
 				D2912AD32A0A61BA0084B84F /* ArtGalleryTests.xctest */,
-				D2912ADD2A0A61BA0084B84F /* ArtGalleryUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -258,17 +239,9 @@
 		D2912AD62A0A61BA0084B84F /* ArtGalleryTests */ = {
 			isa = PBXGroup;
 			children = (
+				D272B33F2A178E98004FB318 /* ArtworkBriefSearchViewModelTest.swift */,
 			);
 			path = ArtGalleryTests;
-			sourceTree = "<group>";
-		};
-		D2912AE02A0A61BA0084B84F /* ArtGalleryUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D2912AE12A0A61BA0084B84F /* ArtGalleryUITests.swift */,
-				D2912AE32A0A61BA0084B84F /* ArtGalleryUITestsLaunchTests.swift */,
-			);
-			path = ArtGalleryUITests;
 			sourceTree = "<group>";
 		};
 		D2C9B9C52A13A62C0019BC1E /* Views */ = {
@@ -328,24 +301,6 @@
 			productReference = D2912AD32A0A61BA0084B84F /* ArtGalleryTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D2912ADC2A0A61BA0084B84F /* ArtGalleryUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D2912AED2A0A61BA0084B84F /* Build configuration list for PBXNativeTarget "ArtGalleryUITests" */;
-			buildPhases = (
-				D2912AD92A0A61BA0084B84F /* Sources */,
-				D2912ADA2A0A61BA0084B84F /* Frameworks */,
-				D2912ADB2A0A61BA0084B84F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D2912ADF2A0A61BA0084B84F /* PBXTargetDependency */,
-			);
-			name = ArtGalleryUITests;
-			productName = ArtGalleryUITests;
-			productReference = D2912ADD2A0A61BA0084B84F /* ArtGalleryUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -361,10 +316,7 @@
 					};
 					D2912AD22A0A61BA0084B84F = {
 						CreatedOnToolsVersion = 14.2;
-						TestTargetID = D2912AC22A0A61B90084B84F;
-					};
-					D2912ADC2A0A61BA0084B84F = {
-						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 						TestTargetID = D2912AC22A0A61B90084B84F;
 					};
 				};
@@ -384,7 +336,6 @@
 			targets = (
 				D2912AC22A0A61B90084B84F /* ArtGallery */,
 				D2912AD22A0A61BA0084B84F /* ArtGalleryTests */,
-				D2912ADC2A0A61BA0084B84F /* ArtGalleryUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -400,13 +351,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D2912AD12A0A61BA0084B84F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D2912ADB2A0A61BA0084B84F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -451,15 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D2912AD92A0A61BA0084B84F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D2912AE22A0A61BA0084B84F /* ArtGalleryUITests.swift in Sources */,
-				D2912AE42A0A61BA0084B84F /* ArtGalleryUITestsLaunchTests.swift in Sources */,
+				D272B3402A178E98004FB318 /* ArtworkBriefSearchViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,11 +406,6 @@
 			isa = PBXTargetDependency;
 			target = D2912AC22A0A61B90084B84F /* ArtGallery */;
 			targetProxy = D2912AD42A0A61BA0084B84F /* PBXContainerItemProxy */;
-		};
-		D2912ADF2A0A61BA0084B84F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D2912AC22A0A61B90084B84F /* ArtGallery */;
-			targetProxy = D2912ADE2A0A61BA0084B84F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -660,15 +591,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YK9KUM8896;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.nikolamilic.ArtGalleryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArtGallery.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ArtGallery";
@@ -680,11 +618,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YK9KUM8896;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.nikolamilic.ArtGalleryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -692,42 +636,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArtGallery.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ArtGallery";
-			};
-			name = Release;
-		};
-		D2912AEE2A0A61BA0084B84F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YK9KUM8896;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = xyz.nikolamilic.ArtGalleryUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ArtGallery;
-			};
-			name = Debug;
-		};
-		D2912AEF2A0A61BA0084B84F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YK9KUM8896;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = xyz.nikolamilic.ArtGalleryUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ArtGallery;
 			};
 			name = Release;
 		};
@@ -757,15 +665,6 @@
 			buildConfigurations = (
 				D2912AEB2A0A61BA0084B84F /* Debug */,
 				D2912AEC2A0A61BA0084B84F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D2912AED2A0A61BA0084B84F /* Build configuration list for PBXNativeTarget "ArtGalleryUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D2912AEE2A0A61BA0084B84F /* Debug */,
-				D2912AEF2A0A61BA0084B84F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
