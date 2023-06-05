@@ -11,12 +11,14 @@ struct ArtworkBriefItemViewModel {
     let id: String
     let title: String
     let author: String
-    let imageURL: String
+    let imageURLString: String
+    
+    var imageURL: URL? { URL(string: imageURLString) }
     
     init(artworkBrief: ArtworkBrief) {
         self.id = artworkBrief.id
         self.title = artworkBrief.title
         self.author = artworkBrief.principalOrFirstMaker
-        self.imageURL = artworkBrief.headerImageURLString
+        self.imageURLString = artworkBrief.headerImageURLString
     }
 }

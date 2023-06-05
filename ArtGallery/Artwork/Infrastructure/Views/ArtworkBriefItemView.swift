@@ -6,20 +6,33 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ArtworkBriefItemView: View {
     let viewModel: ArtworkBriefItemViewModel
     
     var body: some View {
-        HStack {
-            Image(systemName: "paintbrush.pointed.fill")
+        HStack(alignment: .top) {
+            KFImage(viewModel.imageURL)
+                .placeholder {
+                    Image(systemName: "paintbrush.pointed.fill")
+                }
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 100)
+                .clipped()
+            
             VStack(alignment: .leading) {
                 Text(viewModel.title)
-                    .bold()
+                    .font(.headline)
+                    .lineLimit(2)
                 Text(viewModel.author)
-                    .font(.subheadline)
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                    .lineLimit(1)
             }
         }
+        .frame(height: 65)
         .contentShape(Rectangle())
     }
 }
