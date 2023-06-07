@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-@MainActor final class ArtworkBriefListViewModel: ObservableObject {
+final class ArtworkBriefListViewModel: ObservableObject {
     @Published var briefs: [ArtworkBrief]
     
     let searchQuery: String

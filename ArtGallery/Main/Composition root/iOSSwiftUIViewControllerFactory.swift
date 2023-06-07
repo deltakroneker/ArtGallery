@@ -9,7 +9,7 @@ import UIKit
 import SwiftUI
 
 class iOSSwiftUIViewControllerFactory: ViewControllerFactory {
-    @MainActor func searchViewController(briefsLoadedAction: @escaping (String, [ArtworkBrief]) -> Void) -> UIViewController {
+    func searchViewController(briefsLoadedAction: @escaping (String, [ArtworkBrief]) -> Void) -> UIViewController {
         let apiKey = Bundle.main.object(forInfoDictionaryKey: "RIJKSMUSEUM_API_KEY") as! String
         let httpClient = AuthenticatedHTTPClientDecorator(httpClient: URLSession.shared, apiKey: apiKey)
         let loader = RemoteArtworkBriefLoader(client: httpClient)
@@ -18,7 +18,7 @@ class iOSSwiftUIViewControllerFactory: ViewControllerFactory {
         return UIHostingController(rootView: view)
     }
     
-    @MainActor func briefListViewController(searchQuery: String, briefs: [ArtworkBrief], briefTapAction: @escaping (ArtworkBrief) -> Void) -> UIViewController {
+    func briefListViewController(searchQuery: String, briefs: [ArtworkBrief], briefTapAction: @escaping (ArtworkBrief) -> Void) -> UIViewController {
         let viewModel = ArtworkBriefListViewModel(searchQuery: searchQuery, briefs: briefs, briefTapAction: briefTapAction)
         let view = ArtworkBriefListView(viewModel: viewModel)
         return UIHostingController(rootView: view)
