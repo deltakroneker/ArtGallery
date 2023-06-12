@@ -74,8 +74,12 @@ final class NavigationControllerRouterTest: XCTestCase {
             return stubbedSearchVC ?? UIViewController()
         }
         
-        func briefListViewController(searchQuery: String, briefs: [ArtGallery.ArtworkBrief], briefTapAction: @escaping (ArtGallery.ArtworkBrief) -> Void) -> UIViewController {
+        func briefListViewController(searchQuery: String, briefs: [ArtGallery.ArtworkBrief], briefTapAction: @escaping (ArtGallery.Artwork) -> Void) -> UIViewController {
             return stubbedListVCs[searchQuery]?.1 ?? UIViewController()
+        }
+
+        func detailViewController(artwork: ArtGallery.Artwork) -> UIViewController {
+            return UIViewController()
         }
     }
 }

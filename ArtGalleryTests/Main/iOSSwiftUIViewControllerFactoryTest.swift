@@ -28,4 +28,11 @@ final class iOSSwiftUIViewControllerFactoryTest: XCTestCase {
         XCTAssertEqual(controller?.rootView.viewModel.briefs, briefs)
         XCTAssertEqual(controller?.rootView.viewModel.searchQuery, query)
     }
+    
+    func test_detailViewController_createsControllerWithArtworkViewRootView() {
+        let sut = iOSSwiftUIViewControllerFactory()
+        let controller = sut.detailViewController() as? UIHostingController<ArtworkView>
+        
+        XCTAssertNotNil(controller)
+    }
 }

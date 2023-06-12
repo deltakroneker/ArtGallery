@@ -30,7 +30,10 @@ final class NavigationControllerRouter {
         }))
     }
     
-    private func listScreenBriefTapAction(_ brief: ArtworkBrief) {
-        print("TODO: Transition to Artwork details screen")
+    private func listScreenBriefTapAction(_ artwork: Artwork) {
+        dispatchQueue.async(execute: DispatchWorkItem(block: {
+            let detailsVC = self.factory.detailViewController(artwork: artwork)
+            self.navigationController.pushViewController(detailsVC, animated: true)
+        }))
     }
 }

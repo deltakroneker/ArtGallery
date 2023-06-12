@@ -28,6 +28,9 @@
 		D27C61412A2DF7BA000C16DF /* Dispatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C61402A2DF7BA000C16DF /* Dispatching.swift */; };
 		D27C61452A2E05D9000C16DF /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D27C61442A2E05D9000C16DF /* Kingfisher */; };
 		D27C61472A307E93000C16DF /* iOSSwiftUIViewControllerFactoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C61462A307E93000C16DF /* iOSSwiftUIViewControllerFactoryTest.swift */; };
+		D27C61492A308658000C16DF /* ArtworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C61482A308657000C16DF /* ArtworkView.swift */; };
+		D27C614B2A3086E4000C16DF /* ArtworkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C614A2A3086E4000C16DF /* ArtworkViewModel.swift */; };
+		D27C614D2A3089B4000C16DF /* ArtworkDummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C614C2A3089B4000C16DF /* ArtworkDummyData.swift */; };
 		D2912ACB2A0A61BA0084B84F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2912ACA2A0A61BA0084B84F /* Assets.xcassets */; };
 		D2912ACE2A0A61BA0084B84F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2912ACD2A0A61BA0084B84F /* Preview Assets.xcassets */; };
 		D2C9B9C72A13A6400019BC1E /* ArtworkBriefSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9C62A13A6400019BC1E /* ArtworkBriefSearchView.swift */; };
@@ -73,6 +76,9 @@
 		D27C613E2A2DF249000C16DF /* NavigationControllerRouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerRouterTest.swift; sourceTree = "<group>"; };
 		D27C61402A2DF7BA000C16DF /* Dispatching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatching.swift; sourceTree = "<group>"; };
 		D27C61462A307E93000C16DF /* iOSSwiftUIViewControllerFactoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSSwiftUIViewControllerFactoryTest.swift; sourceTree = "<group>"; };
+		D27C61482A308657000C16DF /* ArtworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkView.swift; sourceTree = "<group>"; };
+		D27C614A2A3086E4000C16DF /* ArtworkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkViewModel.swift; sourceTree = "<group>"; };
+		D27C614C2A3089B4000C16DF /* ArtworkDummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkDummyData.swift; sourceTree = "<group>"; };
 		D2912AC32A0A61B90084B84F /* ArtGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2912ACA2A0A61BA0084B84F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2912ACD2A0A61BA0084B84F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -204,6 +210,7 @@
 				D21CFA142A0D2CB0002C0F2E /* ArtworkBriefSearchViewModel.swift */,
 				D2C9B9CD2A13B2990019BC1E /* ArtworkBriefListViewModel.swift */,
 				D21CFA162A0D3544002C0F2E /* ArtworkBriefItemViewModel.swift */,
+				D27C614A2A3086E4000C16DF /* ArtworkViewModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -286,6 +293,7 @@
 				D2C9B9C62A13A6400019BC1E /* ArtworkBriefSearchView.swift */,
 				D2C9B9CF2A13B3D90019BC1E /* ArtworkBriefListView.swift */,
 				D2C9B9D82A13B76B0019BC1E /* ArtworkBriefItemView.swift */,
+				D27C61482A308657000C16DF /* ArtworkView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -294,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				D2C9B9D12A13B4F80019BC1E /* ArtworkBriefDummyData.swift */,
+				D27C614C2A3089B4000C16DF /* ArtworkDummyData.swift */,
 			);
 			path = "Preview Data";
 			sourceTree = "<group>";
@@ -418,16 +427,19 @@
 				D21CFA032A0A733A002C0F2E /* ArtworkMapper.swift in Sources */,
 				D21CFA012A0A6DB9002C0F2E /* ArtworkRequestProvider.swift in Sources */,
 				D21CFA172A0D3544002C0F2E /* ArtworkBriefItemViewModel.swift in Sources */,
+				D27C614D2A3089B4000C16DF /* ArtworkDummyData.swift in Sources */,
 				D21CF9F52A0A6AFC002C0F2E /* ArtworkLoader.swift in Sources */,
 				D2C9B9CC2A13B1A10019BC1E /* RemoteArtworkBriefLoader.swift in Sources */,
 				D21CFA102A0D273F002C0F2E /* URLSessionHTTPClient.swift in Sources */,
 				D27C61412A2DF7BA000C16DF /* Dispatching.swift in Sources */,
+				D27C61492A308658000C16DF /* ArtworkView.swift in Sources */,
 				D21CF9ED2A0A6589002C0F2E /* ViewControllerFactory.swift in Sources */,
 				D21CF9EF2A0A661B002C0F2E /* iOSSwiftUIViewControllerFactory.swift in Sources */,
 				D2C9B9C72A13A6400019BC1E /* ArtworkBriefSearchView.swift in Sources */,
 				D21CF9E92A0A6527002C0F2E /* NavigationControllerRouter.swift in Sources */,
 				D21CF9E62A0A635F002C0F2E /* AppDelegate.swift in Sources */,
 				D21CFA072A0BBDD5002C0F2E /* ArtworkAPIErrors.swift in Sources */,
+				D27C614B2A3086E4000C16DF /* ArtworkViewModel.swift in Sources */,
 				D21CFA052A0A73BC002C0F2E /* ArtworkDTOs.swift in Sources */,
 				D2C9B9D02A13B3D90019BC1E /* ArtworkBriefListView.swift in Sources */,
 			);
