@@ -20,17 +20,16 @@ final class NavigationControllerRouterTest: XCTestCase {
         XCTAssertEqual(navigationController.viewControllers, [searchVC])
     }
     
-    func test_onSearchScreenBriefsLoadedAction_showsListViewController() {
+    func test_onSearchScreenSearchButtonAction_showsListViewController() {
         let searchVC = UIViewController()
         let listVC = UIViewController()
         let query = "query"
-        let briefs = [ArtworkBrief]()
         factory.stubSearchVC(with: searchVC)
-        factory.stubListVC(searchQuery: query, briefs: briefs, with: listVC)
+        factory.stubListVC(searchQuery: query, with: listVC)
         let sut = NavigationControllerRouter(navigationController, factory: self.factory, dispatchQueue: self.dispatchQueue)
         
         sut.start()
-        factory.briefsLoadedAction?(query, briefs)
+        factory.searchButtonAction?(query)
         
         XCTAssertEqual(navigationController.viewControllers, [searchVC, listVC])
     }
@@ -55,30 +54,30 @@ final class NavigationControllerRouterTest: XCTestCase {
     
     private class ViewControllerFactoryStub: ViewControllerFactory {
         private var stubbedSearchVC: UIViewController?
-        var briefsLoadedAction: ((String, [ArtworkBrief]) -> Void)?
+        var searchButtonAction: ((String) -> Void)?
         
-        private var stubbedListVCs = Dictionary<String, ([ArtworkBrief], UIViewController)>()
+        private var stubbedListVCs = Dictionary<String, UIViewController>()
 
         func stubSearchVC(with viewController: UIViewController) {
             stubbedSearchVC = viewController
         }
 
-        func stubListVC(searchQuery: String, briefs: [ArtworkBrief], with viewController: UIViewController) {
-            stubbedListVCs[searchQuery] = (briefs, viewController)
+        func stubListVC(searchQuery: String, with viewController: UIViewController) {
+            stubbedListVCs[searchQuery] = viewController
         }
         
         // Factory protocol:
         
-        func searchViewController(briefsLoadedAction: @escaping (String, [ArtGallery.ArtworkBrief]) -> Void) -> UIViewController {
-            self.briefsLoadedAction = briefsLoadedAction
+        func searchViewController(searchButtonAction: @escaping (String) -> Void) -> UIViewController {
+            self.searchButtonAction = searchButtonAction
             return stubbedSearchVC ?? UIViewController()
         }
         
-        func briefListViewController(searchQuery: String, briefs: [ArtGallery.ArtworkBrief], briefTapAction: @escaping (ArtGallery.Artwork) -> Void) -> UIViewController {
-            return stubbedListVCs[searchQuery]?.1 ?? UIViewController()
+        func briefListViewController(searchQuery: String, briefTapAction: @escaping (ArtGallery.ArtworkBrief) -> Void) -> UIViewController {
+            return stubbedListVCs[searchQuery] ?? UIViewController()
         }
 
-        func detailViewController(artwork: ArtGallery.Artwork) -> UIViewController {
+        func detailViewController(artworkBrief: ArtGallery.ArtworkBrief) -> UIViewController {
             return UIViewController()
         }
     }

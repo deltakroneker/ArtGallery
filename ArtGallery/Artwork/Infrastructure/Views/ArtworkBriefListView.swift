@@ -17,7 +17,7 @@ struct ArtworkBriefListView: View {
                 ForEach(viewModel.briefs) { brief in
                     ArtworkBriefItemView(viewModel: ArtworkBriefItemViewModel(artworkBrief: brief))
                         .onTapGesture {
-                            viewModel.performSearch(id: brief.objectNumber)
+                            viewModel.showArtworkDetails(for: brief)
                         }
                 }
             }
@@ -29,7 +29,7 @@ struct ArtworkBriefListView: View {
 
 struct ArtworkBriefListView_Previews: PreviewProvider {
     static var previews: some View {
-        ArtworkBriefListView(viewModel: ArtworkBriefListViewModel(artworkLoader: RemoteArtworkLoaderMock(), searchQuery: "van gogh", briefs: ArtworkBrief.dummyData, briefTapAction: { _ in }))
+        ArtworkBriefListView(viewModel: ArtworkBriefListViewModel(artworkBriefLoader: RemoteArtworkBriefLoaderMock(), searchQuery: "van gogh", briefTapAction: { _ in }))
     }
 }
 

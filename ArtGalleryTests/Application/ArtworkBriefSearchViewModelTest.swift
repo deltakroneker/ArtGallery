@@ -14,56 +14,30 @@ final class ArtworkBriefSearchViewModelTest: XCTestCase {
         XCTAssertTrue(makeSUT().isPerformSearchDisabled)
     }
     
-    func test_afterInit_performSearchCallDoesNotTriggerLoader() {
-        let loader = ArtworkBriefLoaderSpy()
-
-        makeSUT(loader: loader).performSearch()
+    func test_afterInit_performSearchCallDoesNotTriggerAction() {
+        var called = false
+        let sut = makeSUT(searchButtonAction: { _ in called = true })
         
-        XCTAssertEqual(loader.loadedBriefsForQuery.count, 0)
-    }
-    
-    func test_withQuery_performSearchCallTriggersLoader() {
-        let loader = ArtworkBriefLoaderSpy()
-        let sut = makeSUT(loader: loader)
-        
-        sut.queryText = "query"
         sut.performSearch()
-        
-        XCTAssertEqual(loader.loadedBriefsForQuery.count, 1)
+
+        XCTAssertFalse(called)
     }
     
-    func test_withLoadedBriefs_actionIsCalledWithSameBriefs() {
-        var actionsCalled = Dictionary<String, [ArtworkBrief]>()
-        let loader = ArtworkBriefLoaderSpy()
-        let sut = makeSUT(loader: loader, briefsLoadedAction: { (query, briefs) in actionsCalled[query] = briefs
-        })
+    func test_withQuery_actionIsCalledWithCorrectQuery() {
+        var actionsCalled = [String]()
+        let sut = makeSUT(searchButtonAction: { query in actionsCalled.append(query) })
         
         sut.queryText = "first"
         sut.performSearch()
         sut.queryText = "second"
         sut.performSearch()
         
-        XCTAssertEqual(actionsCalled, loader.loadedBriefsForQuery)
+        XCTAssertEqual(actionsCalled, ["first", "second"])
     }
     
     // Helpers:
     
-    private func makeSUT(loader: ArtworkBriefLoader = ArtworkBriefLoaderSpy(),
-                         briefsLoadedAction: @escaping (String, [ArtworkBrief]) -> Void = { _, _ in }) -> ArtworkBriefSearchViewModel {
-        return ArtworkBriefSearchViewModel(
-            artworkBriefLoader: loader,
-            briefsLoadedAction: briefsLoadedAction)
-    }
-    
-    class ArtworkBriefLoaderSpy: ArtworkBriefLoader {
-        var loadedBriefsForQuery = Dictionary<String, [ArtworkBrief]>()
-        
-        func loadBriefs(for query: String) -> AnyPublisher<[ArtGallery.ArtworkBrief], Error> {
-            let results = [ArtworkBrief.dummyData.first!]
-            self.loadedBriefsForQuery[query] = results
-            return Just(results)
-                .setFailureType(to: Error.self)
-                .eraseToAnyPublisher()
-        }
+    private func makeSUT(searchButtonAction: @escaping (String) -> Void = { _ in }) -> ArtworkBriefSearchViewModel {
+        return ArtworkBriefSearchViewModel(searchButtonAction: searchButtonAction)
     }
 }

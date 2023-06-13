@@ -9,7 +9,7 @@ import SwiftUI
 import Kingfisher
 
 struct ArtworkView: View {
-    var viewModel: ArtworkViewModel
+    @ObservedObject var viewModel: ArtworkViewModel
     
     var body: some View {
         VStack {
@@ -36,6 +36,6 @@ struct ArtworkView: View {
 
 struct ArtworkView_Previews: PreviewProvider {
     static var previews: some View {
-        ArtworkView(viewModel: ArtworkViewModel(artwork: Artwork.dummyData.first!))
+        ArtworkView(viewModel: ArtworkViewModel(artworkLoader: RemoteArtworkLoaderMock(), artworkBrief: ArtworkBrief.dummyData.first!))
     }
 }

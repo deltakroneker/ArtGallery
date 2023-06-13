@@ -13,7 +13,7 @@ final class iOSSwiftUIViewControllerFactoryTest: XCTestCase {
  
     func test_searchViewController_createsControllerWithArtworkBriefSearchViewRootView() {
         let sut = iOSSwiftUIViewControllerFactory()
-        let controller = sut.searchViewController(briefsLoadedAction: { _,_ in }) as? UIHostingController<ArtworkBriefSearchView>
+        let controller = sut.searchViewController(searchButtonAction: { _ in }) as? UIHostingController<ArtworkBriefSearchView>
         
         XCTAssertNotNil(controller)
     }
@@ -21,17 +21,16 @@ final class iOSSwiftUIViewControllerFactoryTest: XCTestCase {
     func test_listViewController_createsControllerWithArtworkBriefListViewRootView() {
         let sut = iOSSwiftUIViewControllerFactory()
         let query = "query"
-        let briefs = ArtworkBrief.dummyData
-        let controller = sut.briefListViewController(searchQuery: query, briefs: briefs, briefTapAction: { _ in}) as? UIHostingController<ArtworkBriefListView>
+        let controller = sut.briefListViewController(searchQuery: query, briefTapAction: { _ in}) as? UIHostingController<ArtworkBriefListView>
         
         XCTAssertNotNil(controller)
-        XCTAssertEqual(controller?.rootView.viewModel.briefs, briefs)
         XCTAssertEqual(controller?.rootView.viewModel.searchQuery, query)
     }
     
     func test_detailViewController_createsControllerWithArtworkViewRootView() {
         let sut = iOSSwiftUIViewControllerFactory()
-        let controller = sut.detailViewController() as? UIHostingController<ArtworkView>
+        let brief = ArtworkBrief.dummyData.first!
+        let controller = sut.detailViewController(artworkBrief: brief) as? UIHostingController<ArtworkView>
         
         XCTAssertNotNil(controller)
     }

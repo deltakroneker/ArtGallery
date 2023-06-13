@@ -9,22 +9,22 @@ import UIKit
 import SwiftUI
 
 class iOSSwiftUIViewControllerFactory: ViewControllerFactory {
-    func searchViewController(briefsLoadedAction: @escaping (String, [ArtworkBrief]) -> Void) -> UIViewController {
-        let loader = RemoteArtworkBriefLoader(client: createAuthenticatedHTTPClient())
-        let viewModel = ArtworkBriefSearchViewModel(artworkBriefLoader: loader, briefsLoadedAction: briefsLoadedAction)
+    func searchViewController(searchButtonAction: @escaping (String) -> Void) -> UIViewController {
+        let viewModel = ArtworkBriefSearchViewModel(searchButtonAction: searchButtonAction)
         let view = ArtworkBriefSearchView(viewModel: viewModel)
         return UIHostingController(rootView: view)
     }
     
-    func briefListViewController(searchQuery: String, briefs: [ArtworkBrief], briefTapAction: @escaping (Artwork) -> Void) -> UIViewController {
-        let loader = RemoteArtworkLoader(client: createAuthenticatedHTTPClient())
-        let viewModel = ArtworkBriefListViewModel(artworkLoader: loader, searchQuery: searchQuery, briefs: briefs, briefTapAction: briefTapAction)
+    func briefListViewController(searchQuery: String, briefTapAction: @escaping (ArtworkBrief) -> Void) -> UIViewController {
+        let loader = RemoteArtworkBriefLoader(client: createAuthenticatedHTTPClient())
+        let viewModel = ArtworkBriefListViewModel(artworkBriefLoader: loader, searchQuery: searchQuery, briefTapAction: briefTapAction)
         let view = ArtworkBriefListView(viewModel: viewModel)
         return UIHostingController(rootView: view)
     }
     
-    func detailViewController(artwork: Artwork) -> UIViewController {
-        let viewModel = ArtworkViewModel(artwork: artwork)
+    func detailViewController(artworkBrief: ArtworkBrief) -> UIViewController {
+        let loader = RemoteArtworkLoader(client: createAuthenticatedHTTPClient())
+        let viewModel = ArtworkViewModel(artworkLoader: loader, artworkBrief: artworkBrief)
         let view = ArtworkView(viewModel: viewModel)
         return UIHostingController(rootView: view)
     }

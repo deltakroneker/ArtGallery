@@ -6,19 +6,54 @@
 //
 
 import Foundation
+import Combine
 
-struct ArtworkViewModel {
-    let title: String
-    let subtitle: String
-    let description: String
-    let imageURLString: String?
+class ArtworkViewModel: ObservableObject {
+    private var artwork: Artwork? {
+        didSet {
+            DispatchQueue.main.async {
+                self.title = self.artwork?.title ?? "No title"
+                self.subtitle = self.artwork?.principalMaker ?? "Unknown maker"
+                self.description = self.artwork?.description ?? "No description"
+                self.imageURLString = self.artwork?.webImageURLString
+            }
+        }
+    }
+    
+    @Published var title: String = "Loading..."
+    @Published var subtitle: String = ""
+    @Published var description: String = ""
+    @Published var imageURLString: String?
+
+    private let artworkLoader: ArtworkLoader
+    private let artworkBrief: ArtworkBrief
+    private var bag = Set<AnyCancellable>()
     
     var imageURL: URL? { (imageURLString != nil) ? URL(string: imageURLString!) : nil }
     
-    init(artwork: Artwork) {
-        self.title = artwork.title
-        self.subtitle = artwork.principalMaker
-        self.description = artwork.description ?? "No description"
-        self.imageURLString = artwork.webImageURLString
+    init(artworkLoader: ArtworkLoader, artworkBrief: ArtworkBrief) {
+        self.artworkLoader = artworkLoader
+        self.artworkBrief = artworkBrief
+        
+        self.performSearch()
+    }
+    
+    func performSearch() {
+        self.artworkLoader.loadArtwork(for: artworkBrief.objectNumber)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
+                    print("Load artwork << finished event >> ")
+                    break
+                case .failure(let err):
+                    print("Load artwork << error event >> ")
+                    print(err.localizedDescription)
+                }
+            }, receiveValue: { [weak self] artwork in
+                print("Load artwork << value event >> ")
+                guard let self = self else { return }
+                self.artwork = artwork
+            })
+            .store(in: &bag)
     }
 }

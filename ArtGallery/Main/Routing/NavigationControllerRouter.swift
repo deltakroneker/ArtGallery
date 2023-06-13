@@ -19,20 +19,20 @@ final class NavigationControllerRouter {
     }
     
     func start() {
-        let searchVC = factory.searchViewController(briefsLoadedAction: searchScreenBriefsLoadedAction)
+        let searchVC = factory.searchViewController(searchButtonAction: searchScreenButtonAction)
         self.navigationController.pushViewController(searchVC, animated: true)
     }
     
-    private func searchScreenBriefsLoadedAction(_ searchQuery: String, _ briefs: [ArtworkBrief]) {
+    private func searchScreenButtonAction(_ searchQuery: String) {
         dispatchQueue.async(execute: DispatchWorkItem(block: {
-            let listVC = self.factory.briefListViewController(searchQuery: searchQuery, briefs: briefs, briefTapAction: self.listScreenBriefTapAction)
+            let listVC = self.factory.briefListViewController(searchQuery: searchQuery, briefTapAction: self.listScreenBriefTapAction)
             self.navigationController.pushViewController(listVC, animated: true)
         }))
     }
     
-    private func listScreenBriefTapAction(_ artwork: Artwork) {
+    private func listScreenBriefTapAction(_ brief: ArtworkBrief) {
         dispatchQueue.async(execute: DispatchWorkItem(block: {
-            let detailsVC = self.factory.detailViewController(artwork: artwork)
+            let detailsVC = self.factory.detailViewController(artworkBrief: brief)
             self.navigationController.pushViewController(detailsVC, animated: true)
         }))
     }

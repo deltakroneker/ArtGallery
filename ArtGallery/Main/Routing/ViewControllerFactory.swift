@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ViewControllerFactory {
-    func searchViewController(briefsLoadedAction: @escaping (String, [ArtworkBrief]) -> Void) -> UIViewController
-    func briefListViewController(searchQuery: String, briefs: [ArtworkBrief], briefTapAction: @escaping (Artwork) -> Void) -> UIViewController
-    func detailViewController(artwork: Artwork) -> UIViewController
+    func searchViewController(searchButtonAction: @escaping (String) -> Void) -> UIViewController
+    func briefListViewController(searchQuery: String, briefTapAction: @escaping (ArtworkBrief) -> Void) -> UIViewController
+    func detailViewController(artworkBrief: ArtworkBrief) -> UIViewController
 }
