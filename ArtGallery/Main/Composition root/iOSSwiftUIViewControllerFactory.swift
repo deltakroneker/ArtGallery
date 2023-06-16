@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftUI
+import Combine
 
 class iOSSwiftUIViewControllerFactory: ViewControllerFactory {
     func searchViewController(searchButtonAction: @escaping (String) -> Void) -> UIViewController {
@@ -16,14 +17,18 @@ class iOSSwiftUIViewControllerFactory: ViewControllerFactory {
     }
     
     func briefListViewController(searchQuery: String, briefTapAction: @escaping (ArtworkBrief) -> Void) -> UIViewController {
-        let loader = RemoteArtworkBriefLoader(client: createAuthenticatedHTTPClient())
+        let loader: ArtworkBriefLoader = MainQueueDispatchDecorator(
+            RemoteArtworkBriefLoader(client: createAuthenticatedHTTPClient())
+        )
         let viewModel = ArtworkBriefListViewModel(artworkBriefLoader: loader, searchQuery: searchQuery, briefTapAction: briefTapAction)
         let view = ArtworkBriefListView(viewModel: viewModel)
         return UIHostingController(rootView: view)
     }
     
     func detailViewController(artworkBrief: ArtworkBrief) -> UIViewController {
-        let loader = RemoteArtworkLoader(client: createAuthenticatedHTTPClient())
+        let loader: ArtworkLoader = MainQueueDispatchDecorator(
+            RemoteArtworkLoader(client: createAuthenticatedHTTPClient())
+        )
         let viewModel = ArtworkViewModel(artworkLoader: loader, artworkBrief: artworkBrief)
         let view = ArtworkView(viewModel: viewModel)
         return UIHostingController(rootView: view)
@@ -32,5 +37,21 @@ class iOSSwiftUIViewControllerFactory: ViewControllerFactory {
     private func createAuthenticatedHTTPClient() -> HTTPClient {
         let apiKey = Bundle.main.object(forInfoDictionaryKey: "RIJKSMUSEUM_API_KEY") as! String
         return AuthenticatedHTTPClientDecorator(httpClient: URLSession.shared, apiKey: apiKey)
+    }
+}
+
+extension MainQueueDispatchDecorator: ArtworkBriefLoader where T == ArtworkBriefLoader {
+    func loadBriefs(for query: String) -> AnyPublisher<[ArtworkBrief], Error> {
+        return decoratee.loadBriefs(for: query)
+            .receive(on: DispatchQueue.main)
+            .eraseToAnyPublisher()
+    }
+}
+
+extension MainQueueDispatchDecorator: ArtworkLoader where T == ArtworkLoader {
+    func loadArtwork(for objectNumber: String) -> AnyPublisher<Artwork, Error> {
+        return decoratee.loadArtwork(for: objectNumber)
+            .receive(on: DispatchQueue.main)
+            .eraseToAnyPublisher()
     }
 }

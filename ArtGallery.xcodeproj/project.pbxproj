@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D203B2612A3C79A700ACD6FB /* ArtworkBriefListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D203B2602A3C79A700ACD6FB /* ArtworkBriefListViewModelTest.swift */; };
+		D203B2632A3C887700ACD6FB /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D203B2622A3C887700ACD6FB /* MainQueueDispatchDecorator.swift */; };
 		D21CF9E62A0A635F002C0F2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CF9E52A0A635F002C0F2E /* AppDelegate.swift */; };
 		D21CF9E92A0A6527002C0F2E /* NavigationControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CF9E82A0A6527002C0F2E /* NavigationControllerRouter.swift */; };
 		D21CF9ED2A0A6589002C0F2E /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CF9EC2A0A6589002C0F2E /* ViewControllerFactory.swift */; };
@@ -54,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D203B2602A3C79A700ACD6FB /* ArtworkBriefListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefListViewModelTest.swift; sourceTree = "<group>"; };
+		D203B2622A3C887700ACD6FB /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
 		D21CF9E52A0A635F002C0F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D21CF9E72A0A63A5002C0F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D21CF9E82A0A6527002C0F2E /* NavigationControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerRouter.swift; sourceTree = "<group>"; };
@@ -112,6 +116,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D203B2642A3C89B200ACD6FB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D203B2622A3C887700ACD6FB /* MainQueueDispatchDecorator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		D21CF9E42A0A6350002C0F2E /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +148,7 @@
 		D21CF9EB2A0A6532002C0F2E /* Composition root */ = {
 			isa = PBXGroup;
 			children = (
+				D203B2642A3C89B200ACD6FB /* Protocols */,
 				D21CF9E52A0A635F002C0F2E /* AppDelegate.swift */,
 				D21CF9EE2A0A661B002C0F2E /* iOSSwiftUIViewControllerFactory.swift */,
 			);
@@ -219,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				D272B33F2A178E98004FB318 /* ArtworkBriefSearchViewModelTest.swift */,
+				D203B2602A3C79A700ACD6FB /* ArtworkBriefListViewModelTest.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -422,6 +436,7 @@
 				D2C9B9CA2A13B0FC0019BC1E /* ArtworkBriefLoader.swift in Sources */,
 				D21CF9FD2A0A6C4A002C0F2E /* RemoteArtworkLoader.swift in Sources */,
 				D2C9B9DB2A13BF9B0019BC1E /* ArtworkBrief.swift in Sources */,
+				D203B2632A3C887700ACD6FB /* MainQueueDispatchDecorator.swift in Sources */,
 				D21CFA122A0D2A05002C0F2E /* AuthenticatedHTTPClientDecorator.swift in Sources */,
 				D21CFA0A2A0BC161002C0F2E /* HTTPClient.swift in Sources */,
 				D21CFA032A0A733A002C0F2E /* ArtworkMapper.swift in Sources */,
@@ -449,6 +464,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D203B2612A3C79A700ACD6FB /* ArtworkBriefListViewModelTest.swift in Sources */,
 				D27C613F2A2DF249000C16DF /* NavigationControllerRouterTest.swift in Sources */,
 				D27C61472A307E93000C16DF /* iOSSwiftUIViewControllerFactoryTest.swift in Sources */,
 				D272B3402A178E98004FB318 /* ArtworkBriefSearchViewModelTest.swift in Sources */,

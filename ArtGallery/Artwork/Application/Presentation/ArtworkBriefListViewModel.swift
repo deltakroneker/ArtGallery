@@ -40,9 +40,7 @@ final class ArtworkBriefListViewModel: ObservableObject {
             }, receiveValue: { [weak self] briefs in
                 print("Load briefs << value event >> ")
                 guard let self = self else { return }
-                DispatchQueue.main.async {
-                    self.briefs = briefs
-                }
+                self.briefs = briefs
             })
             .store(in: &bag)
     }
