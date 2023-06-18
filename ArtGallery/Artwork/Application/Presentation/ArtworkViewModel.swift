@@ -11,12 +11,10 @@ import Combine
 class ArtworkViewModel: ObservableObject {
     private var artwork: Artwork? {
         didSet {
-            DispatchQueue.main.async {
-                self.title = self.artwork?.title ?? "No title"
-                self.subtitle = self.artwork?.principalMaker ?? "Unknown maker"
-                self.description = self.artwork?.description ?? "No description"
-                self.imageURLString = self.artwork?.webImageURLString
-            }
+            self.title = self.artwork?.title ?? "No title"
+            self.subtitle = self.artwork?.principalMaker ?? "Unknown maker"
+            self.description = self.artwork?.description ?? "No description"
+            self.imageURLString = self.artwork?.webImageURLString
         }
     }
     

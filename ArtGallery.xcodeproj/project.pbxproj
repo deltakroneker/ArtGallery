@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D203B2612A3C79A700ACD6FB /* ArtworkBriefListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D203B2602A3C79A700ACD6FB /* ArtworkBriefListViewModelTest.swift */; };
 		D203B2632A3C887700ACD6FB /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D203B2622A3C887700ACD6FB /* MainQueueDispatchDecorator.swift */; };
+		D203B2662A3F54FD00ACD6FB /* ArtworkViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D203B2652A3F54FD00ACD6FB /* ArtworkViewModelTest.swift */; };
 		D21CF9E62A0A635F002C0F2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CF9E52A0A635F002C0F2E /* AppDelegate.swift */; };
 		D21CF9E92A0A6527002C0F2E /* NavigationControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CF9E82A0A6527002C0F2E /* NavigationControllerRouter.swift */; };
 		D21CF9ED2A0A6589002C0F2E /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CF9EC2A0A6589002C0F2E /* ViewControllerFactory.swift */; };
@@ -58,6 +59,7 @@
 /* Begin PBXFileReference section */
 		D203B2602A3C79A700ACD6FB /* ArtworkBriefListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefListViewModelTest.swift; sourceTree = "<group>"; };
 		D203B2622A3C887700ACD6FB /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
+		D203B2652A3F54FD00ACD6FB /* ArtworkViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkViewModelTest.swift; sourceTree = "<group>"; };
 		D21CF9E52A0A635F002C0F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D21CF9E72A0A63A5002C0F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D21CF9E82A0A6527002C0F2E /* NavigationControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerRouter.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			children = (
 				D272B33F2A178E98004FB318 /* ArtworkBriefSearchViewModelTest.swift */,
 				D203B2602A3C79A700ACD6FB /* ArtworkBriefListViewModelTest.swift */,
+				D203B2652A3F54FD00ACD6FB /* ArtworkViewModelTest.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				D27C613F2A2DF249000C16DF /* NavigationControllerRouterTest.swift in Sources */,
 				D27C61472A307E93000C16DF /* iOSSwiftUIViewControllerFactoryTest.swift in Sources */,
 				D272B3402A178E98004FB318 /* ArtworkBriefSearchViewModelTest.swift in Sources */,
+				D203B2662A3F54FD00ACD6FB /* ArtworkViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
