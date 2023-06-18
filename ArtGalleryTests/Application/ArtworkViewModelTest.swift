@@ -15,6 +15,7 @@ final class ArtworkViewModelTest: XCTestCase {
         let brief = ArtworkBrief.dummyData.first!
         let sut = makeSUT(artworkLoader: loader, artworkBrief: brief)
         
+        XCTAssertEqual(sut.artworkBrief, brief)
         XCTAssertEqual(brief.objectNumber, loader.loadedArtworkObjectNumbers.first!)
     }
     

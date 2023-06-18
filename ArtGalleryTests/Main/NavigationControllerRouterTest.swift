@@ -34,6 +34,24 @@ final class NavigationControllerRouterTest: XCTestCase {
         XCTAssertEqual(navigationController.viewControllers, [searchVC, listVC])
     }
     
+    func test_onListScreenBriefTapAction_showsArtworkDetailsViewController() {
+        let searchVC = UIViewController()
+        let listVC = UIViewController()
+        let detailsVC = UIViewController()
+        let query = "query"
+        let brief = ArtworkBrief.dummyData.first!
+        factory.stubSearchVC(with: searchVC)
+        factory.stubListVC(searchQuery: query, with: listVC)
+        factory.stubDetailsVC(objectNumber: brief.objectNumber, with: detailsVC)
+        let sut = NavigationControllerRouter(navigationController, factory: self.factory, dispatchQueue: self.dispatchQueue)
+        
+        sut.start()
+        factory.searchButtonAction?(query)
+        factory.briefTapAction?(brief)
+        
+        XCTAssertEqual(navigationController.viewControllers, [searchVC, listVC, detailsVC])
+    }
+    
     // Helpers:
     
     private let factory = ViewControllerFactoryStub()
@@ -57,6 +75,9 @@ final class NavigationControllerRouterTest: XCTestCase {
         var searchButtonAction: ((String) -> Void)?
         
         private var stubbedListVCs = Dictionary<String, UIViewController>()
+        var briefTapAction: ((ArtworkBrief) -> Void)?
+        
+        private var stubbedDetailsVCs = Dictionary<String, UIViewController>()
 
         func stubSearchVC(with viewController: UIViewController) {
             stubbedSearchVC = viewController
@@ -64,6 +85,10 @@ final class NavigationControllerRouterTest: XCTestCase {
 
         func stubListVC(searchQuery: String, with viewController: UIViewController) {
             stubbedListVCs[searchQuery] = viewController
+        }
+        
+        func stubDetailsVC(objectNumber: String, with viewController: UIViewController) {
+            stubbedDetailsVCs[objectNumber] = viewController
         }
         
         // Factory protocol:
@@ -74,11 +99,12 @@ final class NavigationControllerRouterTest: XCTestCase {
         }
         
         func briefListViewController(searchQuery: String, briefTapAction: @escaping (ArtGallery.ArtworkBrief) -> Void) -> UIViewController {
+            self.briefTapAction = briefTapAction
             return stubbedListVCs[searchQuery] ?? UIViewController()
         }
 
         func detailViewController(artworkBrief: ArtGallery.ArtworkBrief) -> UIViewController {
-            return UIViewController()
+            return stubbedDetailsVCs[artworkBrief.objectNumber] ?? UIViewController()
         }
     }
 }

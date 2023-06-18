@@ -24,7 +24,7 @@ class ArtworkViewModel: ObservableObject {
     @Published var imageURLString: String?
 
     private let artworkLoader: ArtworkLoader
-    private let artworkBrief: ArtworkBrief
+    let artworkBrief: ArtworkBrief
     private var bag = Set<AnyCancellable>()
     
     var imageURL: URL? { (imageURLString != nil) ? URL(string: imageURLString!) : nil }
