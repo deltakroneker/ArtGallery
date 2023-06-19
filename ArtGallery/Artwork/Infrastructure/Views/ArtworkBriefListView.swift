@@ -24,6 +24,12 @@ struct ArtworkBriefListView: View {
             .navigationTitle("\"\(viewModel.searchQuery)\"")
             .navigationBarTitleDisplayMode(.inline)
         }
+        .alert("No results for \"\(viewModel.searchQuery)\". Try again with a different input.", isPresented: $viewModel.isShowingNoResultsAlert) {
+            Button("OK", role: .cancel) {}
+        }
+        .alert(viewModel.isShowingErrorAlert.1 ?? "", isPresented: $viewModel.isShowingErrorAlert.0) {
+            Button("OK", role: .cancel) {}
+        }
     }
 }
 

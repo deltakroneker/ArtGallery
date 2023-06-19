@@ -9,7 +9,13 @@ import Foundation
 import Combine
 
 final class ArtworkBriefListViewModel: ObservableObject {
-    @Published var briefs: [ArtworkBrief]
+    @Published var briefs: [ArtworkBrief] {
+        didSet {
+            isShowingNoResultsAlert = briefs.count == 0
+        }
+    }
+    @Published var isShowingNoResultsAlert = false
+    @Published var isShowingErrorAlert: (Bool, String?) = (false, nil)
     
     private let artworkBriefLoader: ArtworkBriefLoader
     private var bag = Set<AnyCancellable>()
@@ -31,16 +37,13 @@ final class ArtworkBriefListViewModel: ObservableObject {
             .sink(receiveCompletion: { completion in
                 switch completion {
                 case .finished:
-                    print("Load briefs << finished event >> ")
                     break
                 case .failure(let err):
-                    print("Load briefs << error event >> ")
                     print(err.localizedDescription)
+                    self.isShowingErrorAlert = (true, "There was an error. Please try again.")
                 }
             }, receiveValue: { [weak self] briefs in
-                print("Load briefs << value event >> ")
-                guard let self = self else { return }
-                self.briefs = briefs
+                self?.briefs = briefs
             })
             .store(in: &bag)
     }

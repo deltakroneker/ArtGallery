@@ -28,6 +28,30 @@ final class ArtworkBriefListViewModelTest: XCTestCase {
         
         XCTAssertEqual(calledBrief, tappedBrief)
     }
+    
+    func test_onError_showsAlertWithErrorMessage() {
+        let loader = ArtworkBriefLoaderSpy()
+        loader.stubbedError = ArtworkAPIError.unauthorized
+        let sut = makeSUT(artworkBriefLoader: loader)
+        
+        XCTAssertEqual(sut.isShowingErrorAlert.0, true)
+    }
+    
+    func test_onEmptyBriefArray_showsAlertWithErrorMessage() {
+        let loader = ArtworkBriefLoaderSpy()
+        loader.stubbedBriefs = []
+        let sut = makeSUT(artworkBriefLoader: loader)
+        
+        XCTAssertEqual(sut.isShowingNoResultsAlert, true)
+    }
+    
+    func test_onNonEmptyBriefArray_doesntShowErrorAlerts() {
+        let sut = makeSUT()
+        
+        XCTAssertEqual(sut.isShowingErrorAlert.0, false)
+        XCTAssertEqual(sut.isShowingErrorAlert.1, nil)
+        XCTAssertEqual(sut.isShowingNoResultsAlert, false)
+    }
         
     // Helpers:
     
@@ -39,12 +63,24 @@ final class ArtworkBriefListViewModelTest: XCTestCase {
 
     
     private class ArtworkBriefLoaderSpy: ArtworkBriefLoader {
+        var stubbedError: Error?
+        var stubbedBriefs: [ArtworkBrief] = [ArtworkBrief.dummyData.first!]
+        
         var loadedBriefsForQuery = Dictionary<String, [ArtworkBrief]>()
         
+        func stubError(_ error: Error) {
+            self.stubbedError = error
+        }
+        
+        // Protocol methods:
+         
         func loadBriefs(for query: String) -> AnyPublisher<[ArtGallery.ArtworkBrief], Error> {
-            let results = [ArtworkBrief.dummyData.first!]
-            self.loadedBriefsForQuery[query] = results
-            return Just(results)
+            guard stubbedError == nil else {
+                return Fail(error: stubbedError!)
+                    .eraseToAnyPublisher()
+            }
+            self.loadedBriefsForQuery[query] = stubbedBriefs
+            return Just(stubbedBriefs)
                 .setFailureType(to: Error.self)
                 .eraseToAnyPublisher()
         }
