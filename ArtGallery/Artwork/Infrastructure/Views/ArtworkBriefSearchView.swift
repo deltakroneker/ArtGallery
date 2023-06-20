@@ -14,7 +14,7 @@ struct ArtworkBriefSearchView: View {
     var body: some View {
         VStack {
             Form {
-                TextField("Enter artists name...", text: $viewModel.queryText)
+                TextField("Art title, artist name...", text: $viewModel.queryText)
                 Button("Search") {
                     viewModel.performSearch()
                 }
