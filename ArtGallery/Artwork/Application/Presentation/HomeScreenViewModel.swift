@@ -1,5 +1,5 @@
 //
-//  ArtworkBriefSearchViewModel.swift
+//  HomeScreenViewModel.swift
 //  ArtGallery
 //
 //  Created by nikolamilic on 5/11/23.
@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-final class ArtworkBriefSearchViewModel: ObservableObject {
+final class HomeScreenViewModel: ObservableObject {
     private var bag = Set<AnyCancellable>()
     
     @Published var queryText: String = ""

@@ -1,5 +1,5 @@
 //
-//  ArtworkBriefSearchView.swift
+//  HomeScreen.swift
 //  ArtGallery
 //
 //  Created by nikolamilic on 5/16/23.
@@ -8,14 +8,14 @@
 import SwiftUI
 import Combine
 
-struct ArtworkBriefSearchView: View {
-    @ObservedObject var viewModel: ArtworkBriefSearchViewModel
+struct HomeScreen: View {
+    @ObservedObject var viewModel: HomeScreenViewModel
     
     var body: some View {
         VStack {
             Form {
                 TextField("Art title, artist name...", text: $viewModel.queryText)
-                Button("Search") {
+                Button("Search Rijksmuseum") {
                     viewModel.performSearch()
                 }
                 .disabled(viewModel.isPerformSearchDisabled)
@@ -24,9 +24,9 @@ struct ArtworkBriefSearchView: View {
     }
 }
 
-struct ArtworkBriefSearchView_Previews: PreviewProvider {
+struct HomeScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ArtworkBriefSearchView(viewModel: ArtworkBriefSearchViewModel(searchButtonAction: { _ in }))
+        HomeScreen(viewModel: HomeScreenViewModel(searchButtonAction: { _ in }))
     }
 }
 

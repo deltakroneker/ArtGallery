@@ -19,7 +19,7 @@ final class NavigationControllerRouter {
     }
     
     func start() {
-        let searchVC = factory.searchViewController(searchButtonAction: searchScreenButtonAction)
+        let searchVC = factory.homeScreen(searchButtonAction: searchScreenButtonAction)
         self.navigationController.pushViewController(searchVC, animated: true)
     }
     

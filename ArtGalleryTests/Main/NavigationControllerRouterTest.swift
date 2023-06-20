@@ -93,7 +93,7 @@ final class NavigationControllerRouterTest: XCTestCase {
         
         // Factory protocol:
         
-        func searchViewController(searchButtonAction: @escaping (String) -> Void) -> UIViewController {
+        func homeScreen(searchButtonAction: @escaping (String) -> Void) -> UIViewController {
             self.searchButtonAction = searchButtonAction
             return stubbedSearchVC ?? UIViewController()
         }

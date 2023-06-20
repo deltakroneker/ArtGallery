@@ -11,9 +11,9 @@ import SwiftUI
 
 final class iOSSwiftUIViewControllerFactoryTest: XCTestCase {
  
-    func test_searchViewController_createsControllerWithArtworkBriefSearchViewRootView() {
+    func test_homeScreen_createsControllerWithHomeScreenRootView() {
         let sut = iOSSwiftUIViewControllerFactory()
-        let controller = sut.searchViewController(searchButtonAction: { _ in }) as? UIHostingController<ArtworkBriefSearchView>
+        let controller = sut.homeScreen(searchButtonAction: { _ in }) as? UIHostingController<HomeScreen>
         
         XCTAssertNotNil(controller)
     }

@@ -10,9 +10,9 @@ import SwiftUI
 import Combine
 
 class iOSSwiftUIViewControllerFactory: ViewControllerFactory {
-    func searchViewController(searchButtonAction: @escaping (String) -> Void) -> UIViewController {
-        let viewModel = ArtworkBriefSearchViewModel(searchButtonAction: searchButtonAction)
-        let view = ArtworkBriefSearchView(viewModel: viewModel)
+    func homeScreen(searchButtonAction: @escaping (String) -> Void) -> UIViewController {
+        let viewModel = HomeScreenViewModel(searchButtonAction: searchButtonAction)
+        let view = HomeScreen(viewModel: viewModel)
         return UIHostingController(rootView: view)
     }
     

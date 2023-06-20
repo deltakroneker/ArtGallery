@@ -1,5 +1,5 @@
 //
-//  ArtworkBriefSearchViewModelTest.swift
+//  HomeScreenViewModelTest.swift
 //  ArtGalleryTests
 //
 //  Created by nikolamilic on 5/19/23.
@@ -9,7 +9,7 @@ import XCTest
 import Combine
 @testable import ArtGallery
 
-final class ArtworkBriefSearchViewModelTest: XCTestCase {
+final class HomeScreenViewModelTest: XCTestCase {
     func test_afterInit_performSearchIsDisabled() {
         XCTAssertTrue(makeSUT().isPerformSearchDisabled)
     }
@@ -37,7 +37,7 @@ final class ArtworkBriefSearchViewModelTest: XCTestCase {
     
     // Helpers:
     
-    private func makeSUT(searchButtonAction: @escaping (String) -> Void = { _ in }) -> ArtworkBriefSearchViewModel {
-        return ArtworkBriefSearchViewModel(searchButtonAction: searchButtonAction)
+    private func makeSUT(searchButtonAction: @escaping (String) -> Void = { _ in }) -> HomeScreenViewModel {
+        return HomeScreenViewModel(searchButtonAction: searchButtonAction)
     }
 }
