@@ -10,6 +10,7 @@
 		D203B2612A3C79A700ACD6FB /* ArtworkBriefListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D203B2602A3C79A700ACD6FB /* ArtworkBriefListViewModelTest.swift */; };
 		D203B2632A3C887700ACD6FB /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D203B2622A3C887700ACD6FB /* MainQueueDispatchDecorator.swift */; };
 		D203B2662A3F54FD00ACD6FB /* ArtworkViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D203B2652A3F54FD00ACD6FB /* ArtworkViewModelTest.swift */; };
+		D203B26A2A41A31C00ACD6FB /* ArtGallery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D203B2682A41A31C00ACD6FB /* ArtGallery.xcdatamodeld */; };
 		D21CF9E62A0A635F002C0F2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CF9E52A0A635F002C0F2E /* AppDelegate.swift */; };
 		D21CF9E92A0A6527002C0F2E /* NavigationControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CF9E82A0A6527002C0F2E /* NavigationControllerRouter.swift */; };
 		D21CF9ED2A0A6589002C0F2E /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CF9EC2A0A6589002C0F2E /* ViewControllerFactory.swift */; };
@@ -36,6 +37,9 @@
 		D27C614D2A3089B4000C16DF /* ArtworkDummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C614C2A3089B4000C16DF /* ArtworkDummyData.swift */; };
 		D2912ACB2A0A61BA0084B84F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2912ACA2A0A61BA0084B84F /* Assets.xcassets */; };
 		D2912ACE2A0A61BA0084B84F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2912ACD2A0A61BA0084B84F /* Preview Assets.xcassets */; };
+		D2AB62132A4EF5570067F6E0 /* CoreDataPersistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AB62122A4EF5570067F6E0 /* CoreDataPersistable.swift */; };
+		D2AB62152A4F00310067F6E0 /* Artwork+CoreDataPersistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AB62142A4F00310067F6E0 /* Artwork+CoreDataPersistable.swift */; };
+		D2AB62172A4F05590067F6E0 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AB62162A4F05590067F6E0 /* Persistence.swift */; };
 		D2C9B9C72A13A6400019BC1E /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9C62A13A6400019BC1E /* HomeScreen.swift */; };
 		D2C9B9CA2A13B0FC0019BC1E /* ArtworkBriefLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9C92A13B0FC0019BC1E /* ArtworkBriefLoader.swift */; };
 		D2C9B9CC2A13B1A10019BC1E /* RemoteArtworkBriefLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9CB2A13B1A10019BC1E /* RemoteArtworkBriefLoader.swift */; };
@@ -60,6 +64,7 @@
 		D203B2602A3C79A700ACD6FB /* ArtworkBriefListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefListViewModelTest.swift; sourceTree = "<group>"; };
 		D203B2622A3C887700ACD6FB /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
 		D203B2652A3F54FD00ACD6FB /* ArtworkViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkViewModelTest.swift; sourceTree = "<group>"; };
+		D203B2692A41A31C00ACD6FB /* ArtGallery.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ArtGallery.xcdatamodel; sourceTree = "<group>"; };
 		D21CF9E52A0A635F002C0F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D21CF9E72A0A63A5002C0F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D21CF9E82A0A6527002C0F2E /* NavigationControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerRouter.swift; sourceTree = "<group>"; };
@@ -89,6 +94,9 @@
 		D2912ACA2A0A61BA0084B84F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2912ACD2A0A61BA0084B84F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D2912AD32A0A61BA0084B84F /* ArtGalleryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtGalleryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2AB62122A4EF5570067F6E0 /* CoreDataPersistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistable.swift; sourceTree = "<group>"; };
+		D2AB62142A4F00310067F6E0 /* Artwork+CoreDataPersistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Artwork+CoreDataPersistable.swift"; sourceTree = "<group>"; };
+		D2AB62162A4F05590067F6E0 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		D2C9B9C62A13A6400019BC1E /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		D2C9B9C92A13B0FC0019BC1E /* ArtworkBriefLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefLoader.swift; sourceTree = "<group>"; };
 		D2C9B9CB2A13B1A10019BC1E /* RemoteArtworkBriefLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteArtworkBriefLoader.swift; sourceTree = "<group>"; };
@@ -181,6 +189,7 @@
 		D21CF9FA2A0A6C31002C0F2E /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				D2AB62112A4EF1B10067F6E0 /* Data */,
 				D21CF9FB2A0A6C3A002C0F2E /* API */,
 				D21CFA132A0D2C1F002C0F2E /* Presentation */,
 			);
@@ -301,6 +310,17 @@
 				D27C613C2A2DF22C000C16DF /* Application */,
 			);
 			path = ArtGalleryTests;
+			sourceTree = "<group>";
+		};
+		D2AB62112A4EF1B10067F6E0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D203B2682A41A31C00ACD6FB /* ArtGallery.xcdatamodeld */,
+				D2AB62162A4F05590067F6E0 /* Persistence.swift */,
+				D2AB62122A4EF5570067F6E0 /* CoreDataPersistable.swift */,
+				D2AB62142A4F00310067F6E0 /* Artwork+CoreDataPersistable.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		D2C9B9C52A13A62C0019BC1E /* Views */ = {
@@ -431,6 +451,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2AB62172A4F05590067F6E0 /* Persistence.swift in Sources */,
 				D2C9B9CE2A13B2990019BC1E /* ArtworkBriefListViewModel.swift in Sources */,
 				D21CFA152A0D2CB0002C0F2E /* HomeScreenViewModel.swift in Sources */,
 				D2C9B9D22A13B4F80019BC1E /* ArtworkBriefDummyData.swift in Sources */,
@@ -453,8 +474,11 @@
 				D27C61492A308658000C16DF /* ArtworkView.swift in Sources */,
 				D21CF9ED2A0A6589002C0F2E /* ViewControllerFactory.swift in Sources */,
 				D21CF9EF2A0A661B002C0F2E /* iOSSwiftUIViewControllerFactory.swift in Sources */,
+				D2AB62152A4F00310067F6E0 /* Artwork+CoreDataPersistable.swift in Sources */,
 				D2C9B9C72A13A6400019BC1E /* HomeScreen.swift in Sources */,
+				D2AB62132A4EF5570067F6E0 /* CoreDataPersistable.swift in Sources */,
 				D21CF9E92A0A6527002C0F2E /* NavigationControllerRouter.swift in Sources */,
+				D203B26A2A41A31C00ACD6FB /* ArtGallery.xcdatamodeld in Sources */,
 				D21CF9E62A0A635F002C0F2E /* AppDelegate.swift in Sources */,
 				D21CFA072A0BBDD5002C0F2E /* ArtworkAPIErrors.swift in Sources */,
 				D27C614B2A3086E4000C16DF /* ArtworkViewModel.swift in Sources */,
@@ -765,6 +789,19 @@
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		D203B2682A41A31C00ACD6FB /* ArtGallery.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D203B2692A41A31C00ACD6FB /* ArtGallery.xcdatamodel */,
+			);
+			currentVersion = D203B2692A41A31C00ACD6FB /* ArtGallery.xcdatamodel */;
+			path = ArtGallery.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D2912ABB2A0A61B90084B84F /* Project object */;
 }

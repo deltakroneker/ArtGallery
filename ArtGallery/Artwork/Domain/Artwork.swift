@@ -8,6 +8,7 @@
 import Foundation
 
 struct Artwork {
+    var id: String
     let title: String
     let description: String?
     let date: String
@@ -18,4 +19,5 @@ struct Artwork {
     let makerLine: String?
     
     let webImageURLString: String?
+    let localImageData: Data?
 }
