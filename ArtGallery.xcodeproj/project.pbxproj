@@ -17,14 +17,7 @@
 		D21CF9EF2A0A661B002C0F2E /* iOSSwiftUIViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CF9EE2A0A661B002C0F2E /* iOSSwiftUIViewControllerFactory.swift */; };
 		D21CF9F32A0A679F002C0F2E /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CF9F22A0A679F002C0F2E /* Artwork.swift */; };
 		D21CF9F52A0A6AFC002C0F2E /* ArtworkLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CF9F42A0A6AFC002C0F2E /* ArtworkLoader.swift */; };
-		D21CF9FD2A0A6C4A002C0F2E /* RemoteArtworkLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CF9FC2A0A6C4A002C0F2E /* RemoteArtworkLoader.swift */; };
-		D21CFA012A0A6DB9002C0F2E /* ArtworkRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA002A0A6DB9002C0F2E /* ArtworkRequestProvider.swift */; };
-		D21CFA032A0A733A002C0F2E /* ArtworkMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA022A0A733A002C0F2E /* ArtworkMapper.swift */; };
-		D21CFA052A0A73BC002C0F2E /* ArtworkDTOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA042A0A73BC002C0F2E /* ArtworkDTOs.swift */; };
-		D21CFA072A0BBDD5002C0F2E /* ArtworkAPIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA062A0BBDD5002C0F2E /* ArtworkAPIErrors.swift */; };
-		D21CFA0A2A0BC161002C0F2E /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA092A0BC134002C0F2E /* HTTPClient.swift */; };
 		D21CFA102A0D273F002C0F2E /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA0F2A0D273F002C0F2E /* URLSessionHTTPClient.swift */; };
-		D21CFA122A0D2A05002C0F2E /* AuthenticatedHTTPClientDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA112A0D2A05002C0F2E /* AuthenticatedHTTPClientDecorator.swift */; };
 		D21CFA152A0D2CB0002C0F2E /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA142A0D2CB0002C0F2E /* HomeScreenViewModel.swift */; };
 		D21CFA172A0D3544002C0F2E /* ArtworkBriefItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CFA162A0D3544002C0F2E /* ArtworkBriefItemViewModel.swift */; };
 		D272B3402A178E98004FB318 /* HomeScreenViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272B33F2A178E98004FB318 /* HomeScreenViewModelTest.swift */; };
@@ -37,12 +30,19 @@
 		D27C614D2A3089B4000C16DF /* ArtworkDummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C614C2A3089B4000C16DF /* ArtworkDummyData.swift */; };
 		D2912ACB2A0A61BA0084B84F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2912ACA2A0A61BA0084B84F /* Assets.xcassets */; };
 		D2912ACE2A0A61BA0084B84F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2912ACD2A0A61BA0084B84F /* Preview Assets.xcassets */; };
+		D29770212A5C18F50015BEFC /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29770192A5C18F50015BEFC /* HTTPClient.swift */; };
+		D29770222A5C18F50015BEFC /* ArtworkMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D297701A2A5C18F50015BEFC /* ArtworkMapper.swift */; };
+		D29770232A5C18F50015BEFC /* AuthenticatedHTTPClientDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D297701B2A5C18F50015BEFC /* AuthenticatedHTTPClientDecorator.swift */; };
+		D29770242A5C18F50015BEFC /* ArtworkDTOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D297701C2A5C18F50015BEFC /* ArtworkDTOs.swift */; };
+		D29770252A5C18F50015BEFC /* RemoteArtworkBriefLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D297701D2A5C18F50015BEFC /* RemoteArtworkBriefLoader.swift */; };
+		D29770262A5C18F50015BEFC /* RemoteArtworkLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D297701E2A5C18F50015BEFC /* RemoteArtworkLoader.swift */; };
+		D29770272A5C18F50015BEFC /* ArtworkAPIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D297701F2A5C18F50015BEFC /* ArtworkAPIErrors.swift */; };
+		D29770282A5C18F50015BEFC /* ArtworkRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29770202A5C18F50015BEFC /* ArtworkRequestProvider.swift */; };
 		D2AB62132A4EF5570067F6E0 /* CoreDataPersistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AB62122A4EF5570067F6E0 /* CoreDataPersistable.swift */; };
 		D2AB62152A4F00310067F6E0 /* Artwork+CoreDataPersistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AB62142A4F00310067F6E0 /* Artwork+CoreDataPersistable.swift */; };
 		D2AB62172A4F05590067F6E0 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AB62162A4F05590067F6E0 /* Persistence.swift */; };
 		D2C9B9C72A13A6400019BC1E /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9C62A13A6400019BC1E /* HomeScreen.swift */; };
 		D2C9B9CA2A13B0FC0019BC1E /* ArtworkBriefLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9C92A13B0FC0019BC1E /* ArtworkBriefLoader.swift */; };
-		D2C9B9CC2A13B1A10019BC1E /* RemoteArtworkBriefLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9CB2A13B1A10019BC1E /* RemoteArtworkBriefLoader.swift */; };
 		D2C9B9CE2A13B2990019BC1E /* ArtworkBriefListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9CD2A13B2990019BC1E /* ArtworkBriefListViewModel.swift */; };
 		D2C9B9D02A13B3D90019BC1E /* ArtworkBriefListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9CF2A13B3D90019BC1E /* ArtworkBriefListView.swift */; };
 		D2C9B9D22A13B4F80019BC1E /* ArtworkBriefDummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9B9D12A13B4F80019BC1E /* ArtworkBriefDummyData.swift */; };
@@ -72,14 +72,7 @@
 		D21CF9EE2A0A661B002C0F2E /* iOSSwiftUIViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSSwiftUIViewControllerFactory.swift; sourceTree = "<group>"; };
 		D21CF9F22A0A679F002C0F2E /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		D21CF9F42A0A6AFC002C0F2E /* ArtworkLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkLoader.swift; sourceTree = "<group>"; };
-		D21CF9FC2A0A6C4A002C0F2E /* RemoteArtworkLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RemoteArtworkLoader.swift; path = ../../../../../../../RemoteArtworkLoader.swift; sourceTree = "<group>"; };
-		D21CFA002A0A6DB9002C0F2E /* ArtworkRequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArtworkRequestProvider.swift; path = ../../../../../../../ArtworkRequestProvider.swift; sourceTree = "<group>"; };
-		D21CFA022A0A733A002C0F2E /* ArtworkMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArtworkMapper.swift; path = ../../../../../../../ArtworkMapper.swift; sourceTree = "<group>"; };
-		D21CFA042A0A73BC002C0F2E /* ArtworkDTOs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArtworkDTOs.swift; path = ../../../../../../../ArtworkDTOs.swift; sourceTree = "<group>"; };
-		D21CFA062A0BBDD5002C0F2E /* ArtworkAPIErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkAPIErrors.swift; sourceTree = "<group>"; };
-		D21CFA092A0BC134002C0F2E /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		D21CFA0F2A0D273F002C0F2E /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
-		D21CFA112A0D2A05002C0F2E /* AuthenticatedHTTPClientDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedHTTPClientDecorator.swift; sourceTree = "<group>"; };
 		D21CFA142A0D2CB0002C0F2E /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
 		D21CFA162A0D3544002C0F2E /* ArtworkBriefItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefItemViewModel.swift; sourceTree = "<group>"; };
 		D272B33E2A167EE4004FB318 /* secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = secrets.xcconfig; sourceTree = "<group>"; };
@@ -94,12 +87,19 @@
 		D2912ACA2A0A61BA0084B84F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2912ACD2A0A61BA0084B84F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D2912AD32A0A61BA0084B84F /* ArtGalleryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtGalleryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D29770192A5C18F50015BEFC /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		D297701A2A5C18F50015BEFC /* ArtworkMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtworkMapper.swift; sourceTree = "<group>"; };
+		D297701B2A5C18F50015BEFC /* AuthenticatedHTTPClientDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticatedHTTPClientDecorator.swift; sourceTree = "<group>"; };
+		D297701C2A5C18F50015BEFC /* ArtworkDTOs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtworkDTOs.swift; sourceTree = "<group>"; };
+		D297701D2A5C18F50015BEFC /* RemoteArtworkBriefLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteArtworkBriefLoader.swift; sourceTree = "<group>"; };
+		D297701E2A5C18F50015BEFC /* RemoteArtworkLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteArtworkLoader.swift; sourceTree = "<group>"; };
+		D297701F2A5C18F50015BEFC /* ArtworkAPIErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtworkAPIErrors.swift; sourceTree = "<group>"; };
+		D29770202A5C18F50015BEFC /* ArtworkRequestProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtworkRequestProvider.swift; sourceTree = "<group>"; };
 		D2AB62122A4EF5570067F6E0 /* CoreDataPersistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistable.swift; sourceTree = "<group>"; };
 		D2AB62142A4F00310067F6E0 /* Artwork+CoreDataPersistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Artwork+CoreDataPersistable.swift"; sourceTree = "<group>"; };
 		D2AB62162A4F05590067F6E0 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		D2C9B9C62A13A6400019BC1E /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		D2C9B9C92A13B0FC0019BC1E /* ArtworkBriefLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefLoader.swift; sourceTree = "<group>"; };
-		D2C9B9CB2A13B1A10019BC1E /* RemoteArtworkBriefLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteArtworkBriefLoader.swift; sourceTree = "<group>"; };
 		D2C9B9CD2A13B2990019BC1E /* ArtworkBriefListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefListViewModel.swift; sourceTree = "<group>"; };
 		D2C9B9CF2A13B3D90019BC1E /* ArtworkBriefListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefListView.swift; sourceTree = "<group>"; };
 		D2C9B9D12A13B4F80019BC1E /* ArtworkBriefDummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkBriefDummyData.swift; sourceTree = "<group>"; };
@@ -199,14 +199,14 @@
 		D21CF9FB2A0A6C3A002C0F2E /* API */ = {
 			isa = PBXGroup;
 			children = (
-				D2C9B9CB2A13B1A10019BC1E /* RemoteArtworkBriefLoader.swift */,
-				D21CF9FC2A0A6C4A002C0F2E /* RemoteArtworkLoader.swift */,
-				D21CFA002A0A6DB9002C0F2E /* ArtworkRequestProvider.swift */,
-				D21CFA022A0A733A002C0F2E /* ArtworkMapper.swift */,
-				D21CFA042A0A73BC002C0F2E /* ArtworkDTOs.swift */,
-				D21CFA062A0BBDD5002C0F2E /* ArtworkAPIErrors.swift */,
-				D21CFA092A0BC134002C0F2E /* HTTPClient.swift */,
-				D21CFA112A0D2A05002C0F2E /* AuthenticatedHTTPClientDecorator.swift */,
+				D297701F2A5C18F50015BEFC /* ArtworkAPIErrors.swift */,
+				D297701C2A5C18F50015BEFC /* ArtworkDTOs.swift */,
+				D297701A2A5C18F50015BEFC /* ArtworkMapper.swift */,
+				D29770202A5C18F50015BEFC /* ArtworkRequestProvider.swift */,
+				D297701B2A5C18F50015BEFC /* AuthenticatedHTTPClientDecorator.swift */,
+				D29770192A5C18F50015BEFC /* HTTPClient.swift */,
+				D297701D2A5C18F50015BEFC /* RemoteArtworkBriefLoader.swift */,
+				D297701E2A5C18F50015BEFC /* RemoteArtworkLoader.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -453,36 +453,36 @@
 			files = (
 				D2AB62172A4F05590067F6E0 /* Persistence.swift in Sources */,
 				D2C9B9CE2A13B2990019BC1E /* ArtworkBriefListViewModel.swift in Sources */,
+				D29770232A5C18F50015BEFC /* AuthenticatedHTTPClientDecorator.swift in Sources */,
+				D29770212A5C18F50015BEFC /* HTTPClient.swift in Sources */,
 				D21CFA152A0D2CB0002C0F2E /* HomeScreenViewModel.swift in Sources */,
 				D2C9B9D22A13B4F80019BC1E /* ArtworkBriefDummyData.swift in Sources */,
 				D21CF9F32A0A679F002C0F2E /* Artwork.swift in Sources */,
 				D2C9B9D92A13B76B0019BC1E /* ArtworkBriefItemView.swift in Sources */,
+				D29770222A5C18F50015BEFC /* ArtworkMapper.swift in Sources */,
 				D2C9B9CA2A13B0FC0019BC1E /* ArtworkBriefLoader.swift in Sources */,
-				D21CF9FD2A0A6C4A002C0F2E /* RemoteArtworkLoader.swift in Sources */,
 				D2C9B9DB2A13BF9B0019BC1E /* ArtworkBrief.swift in Sources */,
 				D203B2632A3C887700ACD6FB /* MainQueueDispatchDecorator.swift in Sources */,
-				D21CFA122A0D2A05002C0F2E /* AuthenticatedHTTPClientDecorator.swift in Sources */,
-				D21CFA0A2A0BC161002C0F2E /* HTTPClient.swift in Sources */,
-				D21CFA032A0A733A002C0F2E /* ArtworkMapper.swift in Sources */,
-				D21CFA012A0A6DB9002C0F2E /* ArtworkRequestProvider.swift in Sources */,
 				D21CFA172A0D3544002C0F2E /* ArtworkBriefItemViewModel.swift in Sources */,
 				D27C614D2A3089B4000C16DF /* ArtworkDummyData.swift in Sources */,
+				D29770242A5C18F50015BEFC /* ArtworkDTOs.swift in Sources */,
 				D21CF9F52A0A6AFC002C0F2E /* ArtworkLoader.swift in Sources */,
-				D2C9B9CC2A13B1A10019BC1E /* RemoteArtworkBriefLoader.swift in Sources */,
 				D21CFA102A0D273F002C0F2E /* URLSessionHTTPClient.swift in Sources */,
 				D27C61412A2DF7BA000C16DF /* Dispatching.swift in Sources */,
+				D29770282A5C18F50015BEFC /* ArtworkRequestProvider.swift in Sources */,
+				D29770272A5C18F50015BEFC /* ArtworkAPIErrors.swift in Sources */,
 				D27C61492A308658000C16DF /* ArtworkView.swift in Sources */,
 				D21CF9ED2A0A6589002C0F2E /* ViewControllerFactory.swift in Sources */,
 				D21CF9EF2A0A661B002C0F2E /* iOSSwiftUIViewControllerFactory.swift in Sources */,
+				D29770262A5C18F50015BEFC /* RemoteArtworkLoader.swift in Sources */,
 				D2AB62152A4F00310067F6E0 /* Artwork+CoreDataPersistable.swift in Sources */,
 				D2C9B9C72A13A6400019BC1E /* HomeScreen.swift in Sources */,
 				D2AB62132A4EF5570067F6E0 /* CoreDataPersistable.swift in Sources */,
+				D29770252A5C18F50015BEFC /* RemoteArtworkBriefLoader.swift in Sources */,
 				D21CF9E92A0A6527002C0F2E /* NavigationControllerRouter.swift in Sources */,
 				D203B26A2A41A31C00ACD6FB /* ArtGallery.xcdatamodeld in Sources */,
 				D21CF9E62A0A635F002C0F2E /* AppDelegate.swift in Sources */,
-				D21CFA072A0BBDD5002C0F2E /* ArtworkAPIErrors.swift in Sources */,
 				D27C614B2A3086E4000C16DF /* ArtworkViewModel.swift in Sources */,
-				D21CFA052A0A73BC002C0F2E /* ArtworkDTOs.swift in Sources */,
 				D2C9B9D02A13B3D90019BC1E /* ArtworkBriefListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
